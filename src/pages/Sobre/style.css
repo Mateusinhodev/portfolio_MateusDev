@@ -1,0 +1,110 @@
+/* Estilização geral do container */
+.sobre-container {
+    background-color: #374151;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilização do título */
+.titulo-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 12px 20px;
+    background-color: #6c7079;
+    color: #ffffff;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Layout do conteúdo principal */
+.sobre-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 150px;
+    max-width: 1100px;
+    width: 100%;
+}
+
+/* Imagem de perfil */
+.sobre-imagem {
+    width: 450px;
+    height: 450px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sobre-imagem:hover {
+    transform: scale(1.05);
+}
+
+/* Descrição ao lado da imagem */
+.sobre-descricao {
+    max-width: 500px;
+    text-align: justify;
+    color: #ffffff;
+}
+
+.sobre-subtitulo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #f9fafb;
+    margin-bottom: 10px;
+}
+
+/* Texto */
+.sobre-texto {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .sobre-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-imagem {
+        width: 350px;
+        height: 350px;
+    }
+
+    .sobre-descricao {
+        width: 90%;
+    }
+
+    .sobre-subtitulo {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 20px;
+        padding: 10px 16px;
+    }
+
+    .sobre-imagem {
+        width: 300px;
+        height: 300px;
+    }
+
+    .sobre-texto {
+        font-size: 14px;
+    }
+}
