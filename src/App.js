@@ -5,6 +5,7 @@ import Sobre from "./pages/Sobre";
 
 import "./App.css"
 import Skills from "./pages/Habilidades";
+import Projetos from "./pages/Projetos";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Home/>
       <Sobre/>
       <Skills/>
+      <Projetos/>
     </>
   );
 }
