@@ -16,8 +16,7 @@ function Menu() {
             <li className="menu-item">Sobre</li>
             <li className="menu-item">Skills</li>
             <li className="menu-item">Projetos</li>
-            <li className="menu-item">Educação</li>
-            <li className="menu-item">Profissional</li>
+            <li className="menu-item">Experiência</li>
             <li className="menu-item">Contato</li>
         </ul>
     );
@@ -31,7 +30,6 @@ export default function Header() {
         <header className="header">
             <Logo/>
             <Menu/>
-            {/* <CurriculoBtn/> */}
         </header>
     );
 }

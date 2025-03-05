@@ -1,0 +1,16 @@
+.titulo-container {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.titulo {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 12px 20px;
+    background-color: #6c7079;
+    color: #ffffff;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

@@ -1,20 +1,12 @@
 import React from "react";
 import imagemsobremim from "../../assets/imagem-sobremim.jpg"
-
+import Titulo from "../../components/Titulo";
 import "./style.css"
-
-function Titulo() {
-    return(
-        <div className="titulo-container">
-            <p className="titulo">Sobre mim</p>
-        </div>
-    )
-}
 
 export default function Sobre() {
     return(
         <div className="sobre-container">
-            <Titulo/>
+            <Titulo nome={"SOBRE MIM"}/>
             <div className="sobre-conteudo">
                 <img className="sobre-imagem" src={imagemsobremim} alt=''/>
                 <div className="sobre-descricao">

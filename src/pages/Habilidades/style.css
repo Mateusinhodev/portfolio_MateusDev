@@ -1,12 +1,15 @@
+.skills-container {
+    height: 65vh;
+}
+
 .skills-conteudo {
     display: flex;
     flex-wrap: wrap;
     max-width: 800px;
-    margin: 50px auto;
+    margin: 60px auto;
     align-items: center;
     justify-content: center;
     gap: 40px;
-    margin-bottom: 60px;
 }
 
 .skills-conteudo i {
