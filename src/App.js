@@ -6,6 +6,7 @@ import Sobre from "./pages/Sobre";
 import "./App.css"
 import Skills from "./pages/Habilidades";
 import Projetos from "./pages/Projetos";
+import Experiencias from "./pages/Experiencias";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Sobre/>
       <Skills/>
       <Projetos/>
+      <Experiencias/>
     </>
   );
 }

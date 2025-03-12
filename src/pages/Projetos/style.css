@@ -7,7 +7,31 @@
 .projetos-conteudo {
     display: flex;
     gap: 20px;
-    max-width: 500px;
+    max-width: 1200px;
     margin: auto;
     margin-bottom: 50px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute !important; /* Garante que o posicionamento funcione */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10; /* Garante que fique acima do card */
+  color: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Move a seta esquerda para fora do card */
+.swiper-button-prev {
+  left: -60px !important; 
+}
+
+/* Move a seta direita para fora do card */
+.swiper-button-next {
+  right: -60px !important;
 }

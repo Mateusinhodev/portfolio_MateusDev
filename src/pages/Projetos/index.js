@@ -25,7 +25,7 @@ export default function Projetos() {
         <div className="projetos-container">
             <Titulo nome={"PROJETOS"}/>
             <div className="projetos-conteudo">
-                <div className="relative w-full max-w-3xl">
+                <div className="relative w-full max-w3xl p-4 ">
                     {/* Botão Esquerdo */}
                     <button className="swiper-button-prev absolute top-1/2 -left-6 z-10 -translate-y-1/2 text-white p-6">
                         <ChevronLeft size={24} />
@@ -34,14 +34,14 @@ export default function Projetos() {
                     <Swiper
                         modules={[Navigation]}
                         spaceBetween={20}
-                        slidesPerView={1}
+                        slidesPerView={2}
                         navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
                         className="w-full"
                     >
 
                     {/*                 PROJETO 1                    */}
                     <SwiperSlide>
-                        <Card className="w-full max-w-[35rem] shadow-lg bg-[#13131f] text-white">
+                        <Card className="w-full max-w-[40rem] shadow-lg bg-[#13131f] text-white">
                             <CardHeader floated={false}>
                                 <img
                                 src="https://i.im.ge/2025/02/28/HHNRZy.Captura-de-tela-2024-12-05-200712.png"
@@ -91,7 +91,7 @@ export default function Projetos() {
 
                     {/*                 PORJETO 2                    */}
                     <SwiperSlide>
-                        <Card className="w-full max-w-[35rem] shadow-lg bg-[#13131f] text-white">
+                        <Card className="w-full max-w-[40rem] shadow-lg bg-[#13131f] text-white ">
                             <CardHeader floated={false}>
                                 <img
                                 src="https://i.im.ge/2025/02/28/HHCEtq.Captura-de-tela-2024-09-25-154913.png"
@@ -145,9 +145,10 @@ export default function Projetos() {
                             </CardFooter>
                         </Card>
                     </SwiperSlide>
+
                     </Swiper>
                     {/* Botão Direito */}
-                    <button className="swiper-button-next absolute top-1/2 -right-6 z-10 -translate-y-1/2 text-white bg-gray-800 p-2 rounded-full shadow-md hover:bg-gray-700">
+                    <button className="swiper-button-next absolute top-1/2 -left-6 z-10 -translate-y-1/2 text-white p-6">
                         <ChevronRight size={24} />
                     </button>
                 </div>
