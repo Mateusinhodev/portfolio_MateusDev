@@ -16,13 +16,12 @@ import {
     Typography,
     Button,
     Tooltip,
-    IconButton,
   } from "@material-tailwind/react";
 
 export default function Projetos() {
     return(
         <>
-        <div className="projetos-container">
+        <div id="projetos" className="projetos-container">
             <Titulo nome={"PROJETOS"}/>
             <div className="projetos-conteudo">
                 <div className="relative w-full max-w3xl p-4 ">

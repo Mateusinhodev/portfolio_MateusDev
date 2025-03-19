@@ -1,0 +1,13 @@
+.contato-container {
+    background-color: #374151;
+    min-height: 95vh;
+    padding-top: 1px;
+}
+
+.btn-enviar {
+    background-color: #13131f; 
+}
+
+.btn-enviar:hover {
+    background-color: #1f1f2e;
+}

@@ -1,7 +1,4 @@
-import React, { useState } from "react";
 import "./style.css"
-
-import iconMenu from "../../assets/icon-menu.png"
 
 function Logo() {
     return (
@@ -12,12 +9,11 @@ function Logo() {
 function Menu() {
     return(
         <ul className="menu">
-            <li className="menu-item">Home</li>
-            <li className="menu-item">Sobre</li>
-            <li className="menu-item">Skills</li>
-            <li className="menu-item">Projetos</li>
-            <li className="menu-item">Experiência</li>
-            <li className="menu-item">Contato</li>
+            <li className="menu-item"><a href="#sobre">Sobre</a></li>
+            <li className="menu-item"><a href="#skills">Skills</a></li>
+            <li className="menu-item"><a href="#projetos">Projetos</a></li>
+            <li className="menu-item"><a href="#experiencias">Experiências</a></li>
+            <li className="menu-item"><a href="#contato">Contato</a></li>
         </ul>
     );
 }

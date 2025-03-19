@@ -5,7 +5,7 @@ import "./style.css"
 
 export default function Sobre() {
     return(
-        <div className="sobre-container">
+        <div id="sobre" className="sobre-container">
             <Titulo nome={"SOBRE MIM"}/>
             <div className="sobre-conteudo">
                 <img className="sobre-imagem" src={imagemsobremim} alt=''/>

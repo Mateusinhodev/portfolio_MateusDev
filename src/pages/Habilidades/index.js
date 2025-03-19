@@ -5,7 +5,7 @@ import "./style.css"
 
 export default function Skills() {
     return(
-        <div className="skills-container">
+        <div id="skills" className="skills-container">
             <Titulo nome={"SKILLS"}/>
             <div className="skills-conteudo">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML"/>

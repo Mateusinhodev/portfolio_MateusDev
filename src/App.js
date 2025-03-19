@@ -7,16 +7,20 @@ import "./App.css"
 import Skills from "./pages/Habilidades";
 import Projetos from "./pages/Projetos";
 import Experiencias from "./pages/Experiencias";
+import Contato from "./pages/Contato";
+import Footer from "./pages/Footer"
 
 function App() {
   return (
     <>
       <Header/>
       <Home/>
-      <Sobre/>
+      <Sobre path="/sobre"/>
       <Skills/>
       <Projetos/>
       <Experiencias/>
+      <Contato/>
+      <Footer/>
     </>
   );
 }

@@ -12,5 +12,6 @@ body {
   font-family: "Inter", serif;
   /* background-color: #030712; */
   background-color: #13131f;
+  scroll-behavior: smooth;
 }
 
