@@ -4,32 +4,31 @@
     max-width: 1200px;
     align-items: center;
     justify-content: center;
-    min-height: calc(70vh - 70px);
+    min-height: calc(100vh - 70px);
     margin: 0 auto;
-    gap: 200px;
-    /* border: 2px solid #fff; */
+    gap: 100px;
+}
+
+.apresentacao-container {
+    width: 100%;
 }
 
 .apresentacao-nome {
     font-size: 30px;
-}
-
-.apresentacao-container {
-    width: 70%;
-    text-align: justify;
+    margin-bottom: 15px;
+    text-align: left;
 }
 
 .apresentacao-introducao {
     font-size: 18px;
     font-weight: 400;
+    margin-top: 20px;
 }
 
 .curriculo-btn {
     width: 150px;
-    margin: 50px 0;
     background-color: #374151;
     text-align: center;
-    align-items: center;
     font-size: 16px;
     font-weight: bold;
     border-radius: 16px;
@@ -37,6 +36,7 @@
     padding: 10px;
     cursor: pointer;
     transition: 0.3s all;
+    margin: 10px 0px;
 }
 
 .curriculo-btn:hover {
@@ -45,32 +45,115 @@
 
 .social-container {
     display: flex;
-    gap: 15px;
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.social-icon {
-    width: 30px;
-    margin: 20px 0;
+.social-container a {
+    padding: 3px 6px;
+    text-decoration: none;
+    background-color: #374151;
+    color: #fff;
+    border-radius: 18px;
+    margin:0 2px ;
 }
+
+.social-container a:hover {
+    background-color: #fff;
+  }
 
 .imagem-container {
-    position: relative;
-    display: flex;
-    width: 40%;
-    justify-content: center;
+    display: flex; /* Ativa o layout flex */
+    flex-direction: column;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    width: 450px;
+    height: 450px;
+    padding: 10px;
+    box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    font-size: 13px;
 }
 
 .imagem-perfil {
-    margin: auto;
-    width: 300px;
-    height: 300px;
-    /* max-width: 450px;
-    max-width: 450px; */
-    border-radius: 50%; 
-    /* border: 3px solid #ccc; */
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    width: 70%;
+    border: 2px solid black;
+    /* border-radius: 50%; */
 }
 
-.imagem-perfil {
-    transform: scale(1.05);
+.designation {
+    margin: 10px;
+    font-size: 16px;
+    font-family: "Inter", serif;
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column; /* Empilha os itens em telas pequenas */
+        margin: 30px auto;
+        gap: 50px; /* Diminui o espaço entre os itens */
+    }
+
+    .imagem-container {
+        width: 60%; /* Ajusta a largura para 80% da tela */
+        height: auto; /* Ajusta a altura automaticamente */
+    }
+
+    .curriculo-btn {
+        display: flex;
+        width: 200px; /* Faz o botão ocupar 100% da largura disponível */
+        margin: 20px auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social-container {
+        flex-direction: flex; /* Empilha os links das redes sociais */
+    }
+
+    .apresentacao-nome {
+        font-size: 2rem; /* Ajusta o tamanho da fonte */
+        text-align: center;
+    }
+
+    .apresentacao-introducao {
+        font-size: 1rem; /* Ajusta o tamanho da fonte */
+        text-align: center;
+        justify-content: justify;
+    }
+}
+
+/* Media Query para telas muito pequenas (como celulares) */
+@media (max-width: 480px) {
+    .home-container {
+        margin: 0px auto;
+        gap: 20px; /* Diminui ainda mais o espaço entre os itens */
+    }
+
+    .imagem-container {
+        width: 70%; /* Reduz a largura da imagem */
+    }
+
+    .curriculo-btn {
+        width: 200px; /* Faz o botão ocupar 100% da largura */
+        padding: 12px;
+    }
+
+    .social-container a {
+        font-size: 0.8rem; /* Ajusta o tamanho da fonte */
+        padding: 5px 10px; /* Ajusta o padding */
+    }
+
+    .apresentacao-nome {
+        font-size: 1.3rem; /* Ajusta o tamanho da fonte */
+    }
+
+    .apresentacao-introducao {
+        font-size: 0.8rem; /* Ajusta o tamanho da fonte */
+    }
 }

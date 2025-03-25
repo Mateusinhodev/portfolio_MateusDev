@@ -9,8 +9,8 @@ export default function Contato() {
             <div className="contato-conteudo">
                 <section>
                     <div className="px-4 mx-auto max-w-screen-sm">
-                    <p className="mb-6 lg:mb-12 font-light text-center text-gray-500 dark:text-gray-400 sm:text-lg">
-                        Está enfrentando algum problema técnico? Gostaria de enviar um feedback ou saber mais sobre nossos planos? Fale conosco!
+                    <p className="mb-3 lg:mb-8 font-light text-center sm:text-lg">
+                        Tem um projeto ou oportunidade em mente? <br/> Entre em contato pelo formulário e responderei em breve!
                     </p>
                     <form action="#" className="space-y-6">
                         <div>
