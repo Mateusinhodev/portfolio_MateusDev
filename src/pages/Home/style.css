@@ -1,159 +1,324 @@
+/* Container principal */
 .home-container {
     display: flex;
-    width: 80%;
+    flex-wrap: wrap;
+    width: 90%;
     max-width: 1200px;
     align-items: center;
     justify-content: center;
     min-height: calc(100vh - 70px);
     margin: 0 auto;
-    gap: 100px;
+    gap: 60px;
 }
 
+/* Apresentação texto */
 .apresentacao-container {
-    width: 100%;
+    width: 70%;
+    max-width: 700px;
+    /* text-align: center; */
 }
 
 .apresentacao-nome {
-    font-size: 30px;
-    margin-bottom: 15px;
-    text-align: left;
+    font-size: clamp(1rem, 2vw, 6rem);
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
 }
 
 .apresentacao-introducao {
-    font-size: 18px;
+    font-size: clamp(1rem, 2vw, 1.6rem);
     font-weight: 400;
     margin-top: 20px;
+    line-height: 1.6;
+    color: #9CA3AF;
+    text-align: justify;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .curriculo-btn {
-    width: 150px;
+    width: clamp(160px, 40%, 220px);
     background-color: #374151;
+    color: #ffffff;
     text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
     border: none;
-    padding: 10px;
+    padding: 12px;
     cursor: pointer;
-    transition: 0.3s all;
-    margin: 10px 0px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 25px auto;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .curriculo-btn:hover {
-    background-color: #CFD6E4;
+    background-color: #4b5563;
+    transform: scale(1.05);
 }
 
 .social-container {
     display: flex;
-    gap: 10px;
-    margin: 20px 0;
+    gap: 12px;
+    margin: 20px auto 10px;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    flex-wrap: wrap;
 }
 
 .social-container a {
-    padding: 3px 6px;
+    padding: 6px 12px;
     text-decoration: none;
     background-color: #374151;
-    color: #fff;
-    border-radius: 18px;
-    margin:0 2px ;
+    color: #ffffff;
+    border-radius: 20px;
+    transition: all 0.3s;
+    font-weight: 500;
+    font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
 .social-container a:hover {
-    background-color: #fff;
-  }
+    background-color: #cfd6e4;
+    color: #111827;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
 
+/* Imagem container */
 .imagem-container {
-    display: flex; /* Ativa o layout flex */
+    display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    width: 450px;
-    height: 450px;
-    padding: 10px;
-    box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 420px;
+    padding: 15px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background-color: #13131f;
     text-align: center;
-    font-size: 13px;
+    margin: 0 auto;
 }
 
 .imagem-perfil {
-    width: 70%;
-    border: 2px solid black;
-    /* border-radius: 50%; */
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 3px solid #374151;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.imagem-perfil:hover {
+    transform: scale(1.05);
 }
 
 .designation {
-    margin: 10px;
-    font-size: 16px;
-    font-family: "Inter", serif;
+    margin-top: 15px;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    color: #4b5563;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
 }
 
-/* Media Queries para telas menores */
-@media (max-width: 768px) {
+/* Responsividade extra */
+
+@media (max-width: 1366px) {
     .home-container {
-        flex-direction: column; /* Empilha os itens em telas pequenas */
-        margin: 30px auto;
-        gap: 50px; /* Diminui o espaço entre os itens */
+      flex-direction: column;
+      align-items: center;
+      gap: 30px; /* Reduz o espaço entre texto e imagem */
+      padding: 40px 20px;
+    }
+  
+    .apresentacao-container {
+      max-width: 700px;
+      text-align: center;
+    }
+  
+    .apresentacao-nome {
+      font-size: 34px;
+    }
+  
+    .apresentacao-introducao {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+  
+    .imagem-container {
+      width: auto;
+      max-width: 320px;
+      padding: 0;
+    }
+  
+    .imagem-perfil {
+      width: 100%;
+      height: auto;
+    }
+  
+    .social-container {
+      justify-content: center;
+    }
+  
+    .curriculo-btn {
+      margin: 20px auto 0 auto;
+      display: block;
+    }
+}
+
+@media (max-width: 1320px) {
+    .home-container {
+        gap: 60px;
+        padding: 20px 0;
     }
 
-    .imagem-container {
-        width: 60%; /* Ajusta a largura para 80% da tela */
-        height: auto; /* Ajusta a altura automaticamente */
+    .apresentacao-container {
+        max-width: 600px;
+    }
+
+    .apresentacao-nome {
+        font-size: 32px;
+        /* text-align: center; */
+    }
+
+    .apresentacao-introducao {
+        font-size: 20px;
+        text-align: justify;
+        line-height: 1.5;
     }
 
     .curriculo-btn {
-        display: flex;
-        width: 200px; /* Faz o botão ocupar 100% da largura disponível */
+        width: 180px;
         margin: 20px auto;
-        text-align: center;
-        align-items: center;
+        font-size: 15px;
+        display: flex;
         justify-content: center;
     }
 
     .social-container {
-        flex-direction: flex; /* Empilha os links das redes sociais */
-    }
-
-    .apresentacao-nome {
-        font-size: 2rem; /* Ajusta o tamanho da fonte */
-        text-align: center;
-    }
-
-    .apresentacao-introducao {
-        font-size: 1rem; /* Ajusta o tamanho da fonte */
-        text-align: center;
-        justify-content: justify;
-    }
-}
-
-/* Media Query para telas muito pequenas (como celulares) */
-@media (max-width: 480px) {
-    .home-container {
-        margin: 0px auto;
-        gap: 20px; /* Diminui ainda mais o espaço entre os itens */
+        justify-content: center;
+        gap: 10px;
     }
 
     .imagem-container {
-        width: 70%; /* Reduz a largura da imagem */
+        width: 380px;
+        height: auto;
+        padding: 20px;
     }
 
-    .curriculo-btn {
-        width: 200px; /* Faz o botão ocupar 100% da largura */
-        padding: 12px;
+    .imagem-perfil {
+        width: 300px;
+        height: 300px;
     }
 
-    .social-container a {
-        font-size: 0.8rem; /* Ajusta o tamanho da fonte */
-        padding: 5px 10px; /* Ajusta o padding */
+    .designation {
+        font-size: 15px;
+        margin-top: 10px;
     }
+}
 
+@media (max-width: 1156px) {
     .apresentacao-nome {
-        font-size: 1.3rem; /* Ajusta o tamanho da fonte */
+        text-align: center;
     }
 
     .apresentacao-introducao {
-        font-size: 0.8rem; /* Ajusta o tamanho da fonte */
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+        gap: 50px;
+        padding: 15px;
+    }
+
+    .apresentacao-container {
+        width: 90%;
+        text-align: center;
+    }
+
+    .apresentacao-nome {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+    
+    .apresentacao-introducao {
+        font-size: clamp(1rem, 4vw, 1.4rem);
+        line-height: 1.5;
+        text-align: center;
+        max-width: 90%;
+    }
+
+    .imagem-container {
+        width: 85%;
+        max-width: 280px;
+        padding: 10px;
+    }
+
+    .imagem-perfil {
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+    }
+
+    .social-container {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .curriculo-btn {
+        width: 80%;
+        max-width: 200px;
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-container {
+        padding: 10px;
+        gap: 70px;
+    }
+
+    .apresentacao-container {
+        width: 95%;
+        /* padding: 0 10px; */
+    }
+
+    .apresentacao-nome {
+        font-size: 22px;
+        line-height: 1.3;
+    }
+
+    .apresentacao-introducao {
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.4;
+    }
+
+    .imagem-container {
+        width: 90%;
+        max-width: 250px;
+        padding: 8px;
+    }
+
+    .imagem-perfil {
+        max-width: 180px;
+    }
+
+    .curriculo-btn {
+        width: 90%;
+        font-size: 13px;
+        padding: 10px;
     }
 }

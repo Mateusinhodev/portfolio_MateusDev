@@ -7,9 +7,9 @@ function Apresentacao() {
   return (
     <div className="home-container">
       <div className="apresentacao-container">
-        <h1 className="apresentacao-nome">Olá, eu sou o Mateus Rodrigues 👋</h1>
+        <h1 className="apresentacao-nome">Olá, eu sou o Mateus Rodrigues</h1>
         <p className="apresentacao-introducao">
-          Sou Mateus Rodrigues, desenvolvedor Front-End com domínio em React, JavaScript, com experiência em Python e Django. Atualmente, estudo React e Firebase para criar aplicações escaláveis. Focado em UI/UX Design, busco desenvolver soluções eficientes e intuitivas.
+          Desenvolvedor Front-End com domínio em React, JavaScript, com experiência em Python e Django. Atualmente, estudo React e Firebase para criar aplicações escaláveis. Focado em UI/UX Design, busco desenvolver soluções eficientes e intuitivas.
         </p>
         {/* <CurriculoBtn /> */}
         {/* <Social /> */}
@@ -23,8 +23,8 @@ function ImagemPerfil() {
   return (
     <div className="imagem-container">
       <img className="imagem-perfil" src={imagemperfil} alt="Imagem de perfil" />
-      <div class="designation">Desenvolvedor Front End</div>
-      <p>mateusdev23@gmail.com</p>
+      {/* <div class="designation">Desenvolvedor Front End</div>
+      <p>mateusdev23@gmail.com</p> */}
       <Social/>
       <CurriculoBtn />
     </div>

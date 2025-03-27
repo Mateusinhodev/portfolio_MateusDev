@@ -1,37 +1,83 @@
 .projetos-container {
-    background-color: #374151;
-    min-height: 120vh;
-    padding-top: 1px;
+  background-color: #374151;
+  max-height: 120vh;
+  padding-top: 1px;
+  padding-inline: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .projetos-conteudo {
-    display: flex;
-    gap: 20px;
-    max-width: 1200px;
-    margin: auto;
-    margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 90%;
+  width: 1200px;
+  margin-bottom: 50px;
 }
 
+/* Estilização dos botões de navegação do Swiper */
 .swiper-button-prev,
 .swiper-button-next {
-  position: absolute !important; /* Garante que o posicionamento funcione */
+  position: absolute !important;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10; /* Garante que fique acima do card */
+  z-index: 10;
   color: white;
-  width: 50px;
-  height: 50px;
+  width: clamp(40px, 5vw, 50px);
+  height: clamp(40px, 5vw, 50px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Move a seta esquerda para fora do card */
+/* Move as setas para fora dos cards */
 .swiper-button-prev {
-  left: -60px !important; 
+  left: -clamp(20px, 4vw, 60px) !important;
 }
 
-/* Move a seta direita para fora do card */
 .swiper-button-next {
-  right: -60px !important;
+  right: -clamp(20px, 4vw, 60px) !important;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .projetos-conteudo {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .swiper-button-prev {
+    left: -30px !important;
+  }
+
+  .swiper-button-next {
+    right: -30px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .swiper-button-prev {
+    left: -20px !important;
+  }
+
+  .swiper-button-next {
+    right: -20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none; /* Esconde as setas em telas muito pequenas */
+  }
 }

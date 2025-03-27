@@ -33,8 +33,12 @@ export default function Projetos() {
                     <Swiper
                         modules={[Navigation]}
                         spaceBetween={20}
-                        slidesPerView={2}
+                        slidesPerView="auto"
                         navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
+                        breakpoints={{
+                            0: { slidesPerView: 1 },  // Em telas menores, exibir 1 slide
+                            785: { slidesPerView: 2 } // A partir de 640px, exibir 2 slides
+                        }}
                         className="w-full"
                     >
 
