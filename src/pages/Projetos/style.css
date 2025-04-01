@@ -1,6 +1,6 @@
 .projetos-container {
   background-color: #374151;
-  max-height: 120vh;
+  min-height: 110vh;
   padding-top: 1px;
   padding-inline: 10px;
   display: flex;

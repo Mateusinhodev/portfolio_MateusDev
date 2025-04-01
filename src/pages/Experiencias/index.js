@@ -15,82 +15,110 @@ import SchoolIcon from '@mui/icons-material/School';
 import Typography from '@mui/material/Typography';
 
 export default function Experiencias() {
-
-    return(
+    return (
         <div id="experiencias" className="experiencia-container">
-            <Titulo nome={"EXPERIÊNCIAS"}/>
+            <Titulo nome={"EXPERIÊNCIAS"} />
             <div className="experiencia-conteudo">
-
                 <Timeline position="alternate">
                     <TimelineItem>
                         <TimelineOppositeContent
-                        sx={{ m: 'auto 0' }}
-                        align="right"
-                        variant="body2"
-                        color="white"
+                            sx={{ 
+                                m: 'auto 0', 
+                                fontSize: { xs: "0.75rem", sm: "0.9rem", md: "1rem" }
+                            }}
+                            align="right"
+                            color="white"
                         >
-                        2021 - 2025
+                            2021 - 2025
                         </TimelineOppositeContent>
                         <TimelineSeparator>
-                        <TimelineConnector />
-                        <TimelineDot>
-                            <SchoolIcon />
-                        </TimelineDot>
-                        <TimelineConnector />
+                            <TimelineConnector />
+                            <TimelineDot>
+                                <SchoolIcon />
+                            </TimelineDot>
+                            <TimelineConnector />
                         </TimelineSeparator>
                         <TimelineContent sx={{ py: '25px', px: 2 }}>
-                        <Typography variant="h6" component="span">
-                            Ciências da Computação
-                        </Typography>
-                        <Typography>IFTO - Instituto Federal do Tocantins Campus Colinas</Typography>
+                            <Typography 
+                                variant="h6" 
+                                component="span" 
+                                sx={{ fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" } }}
+                            >
+                                Ciências da Computação
+                            </Typography>
+                            <Typography 
+                                sx={{ fontSize: { xs: "0.8rem", sm: "1rem", md: "1.1rem" } }}
+                            >
+                                IFTO - Instituto Federal do Tocantins Campus Colinas
+                            </Typography>
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
                         <TimelineOppositeContent
-                        sx={{ m: 'auto 0' }}
-                        variant="body2"
-                        color="white"
+                            sx={{ 
+                                m: 'auto 0', 
+                                fontSize: { xs: "0.75rem", sm: "0.9rem", md: "1rem" }
+                            }}
+                            color="white"
                         >
-                        2022 - 2023
+                            2022 - 2023
                         </TimelineOppositeContent>
                         <TimelineSeparator>
-                        <TimelineConnector />
-                        <TimelineDot>
-                            <WorkIcon />
-                        </TimelineDot>
-                        <TimelineConnector />
+                            <TimelineConnector />
+                            <TimelineDot>
+                                <WorkIcon />
+                            </TimelineDot>
+                            <TimelineConnector />
                         </TimelineSeparator>
                         <TimelineContent sx={{ py: '25px', px: 2 }}>
-                        <Typography variant="h6" component="span">
-                            Estágio em Tecnologia da Informação - TI
-                        </Typography>
-                        <Typography>Prefeitura Municipal de Guarai</Typography>
+                            <Typography 
+                                variant="h6" 
+                                component="span" 
+                                sx={{ fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" } }}
+                            >
+                                Estágio em Tecnologia da Informação - TI
+                            </Typography>
+                            <Typography 
+                                sx={{ fontSize: { xs: "0.8rem", sm: "1rem", md: "1.1rem" } }}
+                            >
+                                Prefeitura Municipal de Guarai
+                            </Typography>
                         </TimelineContent>
                     </TimelineItem>
                     <TimelineItem>
                         <TimelineOppositeContent
-                        sx={{ m: 'auto 0' }}
-                        variant="body2"
-                        color="white"
+                            sx={{ 
+                                m: 'auto 0', 
+                                fontSize: { xs: "0.75rem", sm: "0.9rem", md: "1rem" }
+                            }}
+                            color="white"
                         >
-                        2024 - Presente
+                            2024 - Presente
                         </TimelineOppositeContent>
                         <TimelineSeparator>
-                        <TimelineConnector />
-                        <TimelineDot>
-                            <WorkIcon />
-                        </TimelineDot>
-                        <TimelineConnector />
+                            <TimelineConnector />
+                            <TimelineDot>
+                                <WorkIcon />
+                            </TimelineDot>
+                            <TimelineConnector />
                         </TimelineSeparator>
-                        <TimelineContent sx={{ py: 'px', px: 2 }}>
-                        <Typography variant="h6" component="span">
-                            Técnico em Informática - TI
-                        </Typography>
-                        <Typography>Prefeitura Municipal de Guarai</Typography>
+                        <TimelineContent sx={{ py: '25px', px: 2 }}>
+                            <Typography 
+                                variant="h6" 
+                                component="span" 
+                                sx={{ fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" } }}
+                            >
+                                Técnico em Informática - TI
+                            </Typography>
+                            <Typography 
+                                sx={{ fontSize: { xs: "0.8rem", sm: "1rem", md: "1.1rem" } }}
+                            >
+                                Prefeitura Municipal de Guarai
+                            </Typography>
                         </TimelineContent>
                     </TimelineItem>
-                    </Timeline>
+                </Timeline>
             </div>
         </div>
-    )
+    );
 }
