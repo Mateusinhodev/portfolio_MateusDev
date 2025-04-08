@@ -1,47 +1,46 @@
-body {
-    color: #FFF;
-    font-family: "Inter", serif;
-    font-weight: 700;
-    /* font-size: 30px; */
-}
-
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    max-width: 1200px;
-    height: 70px;
     align-items: center;
+    height: 70px;
+    padding: 0 13%;
+    width: 100%;
     margin: 0 auto;
-    /* border: 2px solid #fff; */
+    z-index: 1000;
+    background-color: #13131f;
 }
 
 .logo {
     font-size: 30px;
-    text-align: center;
+    font-weight: bold;
+    color: #fff;
 }
 
 .menu-container {
     display: flex;
-    /* align-items: center; */
+    align-items: center;
 }
 
 .menu {
     display: flex;
-    gap: 10px;
-    /* flex-wrap: nowrap;
-    float: left;
-    align-items: center;
-    height: 45px;
-    padding: 15px;
-    border-radius: 20px;
-    list-style: none; */
+    gap: 20px;
+    list-style: none;
 }
 
 .menu-item a {
+    font-size: 18px;
     position: relative;
     text-decoration: none;
     color: #6c7079;
+    transition: color 0.3s;
+}
+
+.menu-item a:hover {
+    color: #fff;
 }
 
 .menu-item a::after {
@@ -59,26 +58,25 @@ body {
     width: 100%;
 }
 
-
 /* Menu Hamburguer */
+.menuButton {
+    display: none;
+}
 
 @media (max-width: 860px) {
     .menuButton {
         width: 30px;
         height: 30px;
-        position: relative;
-        right: 20px;
         cursor: pointer;
         display: flex;
         flex-direction: column;
-        text-align: center;
         justify-content: space-evenly;
+        margin-left: auto;
     }
-    
+
     .linha {
-        display: block;
         width: 100%;
-        height: 2px;
+        height: 3px;
         background-color: white;
     }
 
@@ -88,31 +86,25 @@ body {
 
     .show {
         display: flex;
-        width: 25%;
-        height: auto;
-        position: absolute;
-        top: 70px; /* Considere alinhar à altura do header */
-        right: 12%;
-        background-color: #0d0d0d; /* se quiser um fundo escuro pra destacar */
         flex-direction: column;
-        padding: 20px;
         gap: 1rem;
+        position: absolute;
+        top: 70px;
+        right: 5%;
+        background-color: #0d0d0d;
+        padding: 20px;
+        border-radius: 10px;
         z-index: 999;
     }
 }
 
-@media(max-width: 480px) {
+@media (max-width: 480px) {
     .header {
-        width: 90%;
-    }
-    .show {
-       width: 100%; 
-       text-align: center;
-       margin-right: 0px;
-       right: 0;
+        padding: 0 3%;
     }
 
-    .logo {
-        font-size: 24px;
+    .show {
+        right: 3%;
+        width: 80%;
     }
 }
