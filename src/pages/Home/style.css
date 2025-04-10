@@ -1,6 +1,6 @@
 section {
     min-height: 100vh;
-    padding: 5rem 10%;
+    padding: 3rem 10% 1rem;
 }
 
 .home {
@@ -20,18 +20,16 @@ section {
     /* margin-top: 0.5rem; */
 }
 
-span {
-    color: #6c7079;
-}
-
 .home-container h3 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     margin-top: 1rem;
     font-size: 2.5rem;
+    color: #6c7079;
+    font-weight: 700;
 }
 
 .home-container h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     margin-top: 4rem;
     line-height: 1.2;
@@ -111,91 +109,86 @@ span {
     transform: translateY(-5px);
 }
 
-.text-animation {
-    /* font-size: 34px;
-    font-weight: 600;
-    min-width: 280px; */
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 3px solid #6c7079;
-    animation: typing 3.5s steps(30, end), blink 0.75s step-end infinite;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.text-animation span {
-    position: relative;
-}
-
-.text-animation span:before {
-    content: "Programador Front End";
-    color: #6c7079;
-    animation: words 20s infinite;
-}
-
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-@keyframes blink {
-    50% { border-color: transparent; }
-}
-
-/* Telas pequenas (tablets e celulares maiores: 768px - 991px) */
-@media (max-width: 991px) {
+@media(max-width: 1410px) {
     .home {
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-    }
-
-    .home-container {
-        align-items: center;
-        text-align: center;
+        flex-direction: column-reverse;
+        margin: 5rem 4rem;
+        gap: 2px;
     }
 
     .home-container h1 {
-        font-size: 2.5rem;
+        margin: 3rem auto 0;
+    }
+
+    .home-container h3 {
+        margin: 1rem auto;
+    }
+
+    .home-container p {
+        text-align: center;
+    }
+
+    .social-icons {
+        margin: 2rem auto;
+    }
+
+    .btn-curriculo {
+        margin: 0 auto;
+    }
+}
+
+
+@media(max-width: 895px) {
+    .home{
+        flex-direction: column-reverse;
+        margin: 3rem 4rem;
     }
 
     .home-container h3 {
         font-size: 2rem;
     }
 
+    .home-container h1 {
+        font-size: 3rem;
+    }
+
     .home-container p {
-        font-size: 1rem;
-        max-width: 90%;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
     }
 
     .home-img img {
-        width: 60vw;
-        max-width: 220px;
+        width: 56vw;
     }
 
-    .social-icons a {
-        font-size: 2rem;
-        width: 2.8rem;
-        height: 2.8rem;
+    .social-icons {
+        margin: 2rem auto;
+    }
+
+    .btn-curriculo {
+        margin: 0 auto;
     }
 }
 
 /* Telas extra pequenas (celulares: até 767px) */
 @media (max-width: 767px) {
     section {
-        padding: 3rem 5%;
+        padding: 3rem 2%;
     }
 
     .home-container h1 {
-        font-size: 2rem;
+        font-size: 1.2rem;
+        margin: 3rem auto 0;
     }
 
     .home-container h3 {
-        font-size: 1.6rem;
+        font-size: 1rem;
     }
 
     .home-container p {
         font-size: 0.95rem;
+        /* display: none; */
     }
 
     .home-img img {
@@ -205,31 +198,6 @@ span {
 
     .social-icons a {
         margin: 0 0.5rem;
-    }
-}
-
-/* Telas muito pequenas (smartphones antigos, até 480px) */
-@media (max-width: 480px) {
-    .home-container h1 {
-        font-size: 1.6rem;
-    }
-
-    .home-container h3 {
-        font-size: 1.3rem;
-    }
-
-    .home-container p {
-        font-size: 0.9rem;
-    }
-
-    .home-img img {
-        width: 80vw;
-        max-width: 150px;
-    }
-
-    .social-icons a {
-        font-size: 1.8rem;
         width: 2.5rem;
-        height: 2.5rem;
     }
 }

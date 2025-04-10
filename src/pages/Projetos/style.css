@@ -1,11 +1,12 @@
 .projetos-container {
   background-color: #374151;
-  min-height: 110vh;
-  padding-top: 1px;
-  padding-inline: 10px;
+  min-height: 100vh;
+  padding-top: 1rem;
+  padding-inline: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .projetos-conteudo {
@@ -13,12 +14,14 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  max-width: 90%;
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 1rem;
+  box-sizing: border-box;
   margin-bottom: 50px;
 }
 
-/* Estilização dos botões de navegação do Swiper */
+/* Navegação Swiper */
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute !important;
@@ -33,7 +36,7 @@
   justify-content: center;
 }
 
-/* Move as setas para fora dos cards */
+/* Ajuste de posicionamento das setas */
 .swiper-button-prev {
   left: -clamp(20px, 4vw, 60px) !important;
 }
@@ -42,7 +45,7 @@
   right: -clamp(20px, 4vw, 60px) !important;
 }
 
-/* Responsividade */
+/* Tablets e telas médias */
 @media (max-width: 1024px) {
   .projetos-conteudo {
     flex-direction: column;
@@ -51,33 +54,49 @@
   }
 
   .swiper-button-prev {
-    left: -30px !important;
+    left: -25px !important;
   }
 
   .swiper-button-next {
-    right: -30px !important;
+    right: -25px !important;
   }
 }
 
-@media (max-width: 768px) {
+/* Dispositivos móveis */
+@media (max-width: 770px) {
   .swiper-button-prev,
   .swiper-button-next {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
   }
 
   .swiper-button-prev {
-    left: -20px !important;
+    left: -15px !important;
   }
 
   .swiper-button-next {
-    right: -20px !important;
+    right: -15px !important;
+  }
+
+  .projetos-container {
+    padding-inline: 0.5rem;
   }
 }
 
+/* Telas muito pequenas */
 @media (max-width: 480px) {
   .swiper-button-prev,
   .swiper-button-next {
     display: none; /* Esconde as setas em telas muito pequenas */
+  }
+
+  .projetos-container {
+    height: auto; /* <-- Altere de 80vh para auto */
+    height: 80vh; /* Garante que preenche a tela se o conteúdo for pequeno */
+    padding-bottom: 2rem; /* Espaçamento inferior opcional */
+  }
+
+  .projetos-conteudo {
+    gap: 10px;
   }
 }

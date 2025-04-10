@@ -10,8 +10,10 @@ export default function Sobre() {
             <div className="sobre-conteudo">
                 <img className="sobre-imagem" src={imagemsobremim} alt=''/>
                 <div className="sobre-descricao">
-                    <h2 className="sobre-subtitulo">Curioso sobre mim? Aqui está:</h2>
-                    <p className="sobre-texto">Sou um Desenvolvedor Front-End com foco em tecnologia e inovação. Minha missão é transformar ideias em interfaces intuitivas, responsivas e visualmente impactantes, proporcionando experiências eficientes para os usuários. Sou domínio em HTML, CSS, JavaScript, React e Git, além de ter experiência com Python e Django. Atualmente, estou aprofundando meus conhecimentos em React e Firebase, explorando novas formas de otimizar o desenvolvimento de aplicações modernas e escaláveis. <br/><br/> Além do desenvolvimento, sou entusiasta de UI/UX Design, sempre buscando criar interfaces atraentes e funcionais. Meu maior objetivo é desenvolver sistemas e sites que realmente ajudem as pessoas e façam a diferença. Sou um profissional esforçado e comprometido, sempre em busca de novos desafios e oportunidades para crescer. Se você precisa de um desenvolvedor que une técnica, criatividade e foco em resultados, vamos conversar!</p>
+                    <h2 className="sobre-subtitulo">Gostaria de saber mais sobre mim? Aqui está:</h2>
+                    <p className="sobre-texto">Sou um Desenvolvedor Front-End com foco em criar interfaces funcionais e interativas, sempre buscando unir praticidade, clareza e uma boa experiência para o usuário. Tenho domínio em HTML, CSS, JavaScript e React, além de experiência com Bootstrap, Tailwind, Git, Firebase, Python e Django. Minha base em backend foi fortalecida por meio de um trabalho acadêmico, que ampliou minha visão sobre o desenvolvimento web de forma mais completa.
+<br/><br/>
+Atualmente, estou aprofundando meus conhecimentos em React e explorando mais recursos do Firebase, com o objetivo de criar aplicações modernas, eficientes e bem estruturadas. Sou curioso, comprometido e apaixonado por aprender, sempre em busca de evoluir e encarar novos desafios que me façam crescer como profissional. Se você procura alguém com iniciativa, técnica e vontade de fazer acontecer, estou pronto para somar!</p>
                 </div>
             </div>
         </div>

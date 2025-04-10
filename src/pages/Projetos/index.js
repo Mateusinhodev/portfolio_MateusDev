@@ -24,7 +24,7 @@ export default function Projetos() {
         <div id="projetos" className="projetos-container">
             <Titulo nome={"PROJETOS"}/>
             <div className="projetos-conteudo">
-                <div className="relative w-full max-w3xl p-4 ">
+                <div className="relative w-full max-w3xl px-12">
                     {/* Botão Esquerdo */}
                     <button className="swiper-button-prev absolute top-1/2 -left-6 z-10 -translate-y-1/2 text-white p-6">
                         <ChevronLeft size={24} />

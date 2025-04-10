@@ -1,13 +1,44 @@
 .contato-container {
+    min-height: 75vh; /* Altura mínima, não fixa */
     background-color: #374151;
-    min-height: 90vh;
-    padding-top: 1px;
+    padding: 2rem 1rem; /* Espaçamento interno vertical e horizontal */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
 }
 
 .btn-enviar {
-    background-color: #13131f; 
+    background-color: #13131f;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .btn-enviar:hover {
     background-color: #1f1f2e;
+}
+
+.contato-conteudo {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Responsividade extra */
+@media (max-width: 480px) {
+    .contato-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .contato-conteudo {
+        padding: 1rem 0.75rem;
+    }
 }
