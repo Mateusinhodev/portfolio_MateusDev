@@ -1,5 +1,5 @@
 import React from "react";
-import imagemperfil from "../../assets/image-perfil.jpeg";
+// import imagemperfil from "../../assets/image-perfil.jpeg";
 import curriculo from "../../assets/curriculo.pdf";
 import "./style.css";
 
@@ -22,7 +22,7 @@ function Apresentacao() {
 function ImagemPerfil() {
   return (
     <div className="home-img">
-      <img src={imagemperfil} alt="Imagem de perfil" />
+      <img src="https://i.imgur.com/uGPSNbZ.jpeg" alt="Imagem de perfil" />
     </div>
   );
 }

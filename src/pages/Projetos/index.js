@@ -53,16 +53,16 @@ export default function Projetos() {
                                 <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
                             </CardHeader>
                             <CardBody>
-                                <div className="mb-3 flex items-center justify-between">
-                                <Typography variant="h5" color="white" className="font-medium">
+                                <div className="flex items-center justify-between">
+                                <Typography variant="h4" color="white" className="font-bold">
                                     Livraria Digital
                                 </Typography>
                                 </div>
-                                <Typography color="white">
+                                {/* <Typography color="white">
                                 A Livraria Digital permite buscar livros, ver detalhes como descrição e capa, salvar favoritos e pesquisar mais informações no Google. 
                                 A navegação é rápida e intuitiva, oferecendo uma experiência fluida para explorar livros.
-                                </Typography>
-                                <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
+                                </Typography> */}
+                                <div className="group mt-2 inline-flex flex-wrap items-center gap-3">
                                 <Tooltip content="JavaScript">
                                     <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" className="h-6 w-6">
@@ -84,7 +84,7 @@ export default function Projetos() {
                                 </Tooltip>
                                 </div>
                             </CardBody>
-                            <CardFooter className="pt-3">
+                            <CardFooter className="pt-0">
                                 <Button size="lg" fullWidth={true}>
                                 Visitar
                                 </Button>
@@ -104,14 +104,14 @@ export default function Projetos() {
                             </CardHeader>
                             <CardBody>
                                 <div className="mb-3 flex items-center justify-between">
-                                <Typography variant="h5" color="white" className="font-medium">
+                                <Typography variant="h4" color="white" className="font-bold">
                                 Controle de Acesso ao Laboratório
                                 </Typography>
                                 </div>
-                                <Typography color="white">
+                                {/* <Typography color="white">
                                 O Sistema de Controle de Acesso aos Laboratórios do IFTO permite agendar e monitorar o uso dos laboratórios, registrar horários e controlar o acesso dos usuários. A integração via API e o controle físico serão implementados na próxima fase.
-                                </Typography>
-                                <div className="group mt-8 inline-flex flex-wrap items-center gap-3">
+                                </Typography> */}
+                                <div className="group mt-2 inline-flex flex-wrap items-center gap-3">
                                 <Tooltip content="Python">
                                     <span className="cursor-pointer rounded-full border border-gray-900/5 bg-gray-900/5 p-3 text-gray-900 transition-colors hover:border-gray-900/10 hover:bg-gray-900/10 hover:!opacity-100 group-hover:opacity-70">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" className="h-6 w-6">
