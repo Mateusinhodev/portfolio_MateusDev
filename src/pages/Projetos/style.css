@@ -1,6 +1,6 @@
 .projetos-container {
   background-color: #374151;
-  min-height: 100vh;
+  min-height: 90vh;
   padding-top: 1rem;
   padding-inline: 1rem;
   display: flex;
@@ -64,6 +64,10 @@
 
 /* Dispositivos móveis */
 @media (max-width: 770px) {
+  .projetos-container {
+    min-height: 60vh;
+  }
+
   .swiper-button-prev,
   .swiper-button-next {
     width: 36px;
@@ -92,7 +96,7 @@
 
   .projetos-container {
     height: auto; /* <-- Altere de 80vh para auto */
-    height: 80vh; /* Garante que preenche a tela se o conteúdo for pequeno */
+    height: 70vh; /* Garante que preenche a tela se o conteúdo for pequeno */
     padding-bottom: 2rem; /* Espaçamento inferior opcional */
   }
 
