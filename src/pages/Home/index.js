@@ -22,7 +22,7 @@ function Apresentacao() {
 function ImagemPerfil() {
   return (
     <div className="home-img">
-      <img src="https://i.imgur.com/YSMg3wH.jpeg" alt="Imagem de perfil" />
+      <img src="https://i.imgur.com/uGPSNbZ.jpeg" alt="Imagem de perfil" />
     </div>
   );
 }

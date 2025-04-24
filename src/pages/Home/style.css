@@ -152,7 +152,7 @@ section {
     }
 
     .home-container h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .home-container p {
@@ -182,7 +182,7 @@ section {
     }
 
     .home-container h1 {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         margin: 3rem auto 0;
     }
 
@@ -203,5 +203,37 @@ section {
     .social-icons a {
         margin: 0 0.5rem;
         width: 2.5rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .home-container h1 {
+        font-size: 1.2rem;
+        margin: 3rem auto 0;
+    }
+}
+
+@media (max-width: 380px) {
+    .home-container h1 {
+        font-size: 1rem;
+        margin: 3rem auto 0;
+    }
+
+    .home-container h3 {
+        font-size: 0.8rem;
+    }
+
+    .home-container p {
+        font-size: 0.80rem;
+        /* display: none; */
+    }
+
+    .social-icons a {
+        margin: 0 0.5rem;
+        width: 2rem;
+    }
+
+    .btn-curriculo {
+        font-size: 20px;
     }
 }
