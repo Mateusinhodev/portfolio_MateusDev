@@ -14,6 +14,7 @@ const CATEGORIAS = [
             { nome: "HTML", icone: `${DEVICON}/html5/html5-original.svg` },
             { nome: "CSS", icone: `${DEVICON}/css3/css3-original.svg` },
             { nome: "JavaScript", icone: `${DEVICON}/javascript/javascript-original.svg` },
+            { nome: "TypeScript", icone: `${DEVICON}/typescript/typescript-original.svg` },
             { nome: "React", icone: `${DEVICON}/react/react-original.svg` },
             { nome: "Bootstrap", icone: `${DEVICON}/bootstrap/bootstrap-original.svg` },
             { nome: "Tailwind CSS", icone: `${DEVICON}/tailwindcss/tailwindcss-original.svg` },
@@ -26,6 +27,7 @@ const CATEGORIAS = [
             { nome: "Python", icone: `${DEVICON}/python/python-original.svg` },
             { nome: "Django", icone: `${DEVICON}/django/django-plain.svg`, claro: true },
             { nome: "Firebase", icone: `${DEVICON}/firebase/firebase-original.svg` },
+            { nome: "MySQL", icone: `${DEVICON}/mysql/mysql-original.svg`, claro: true },
             { nome: "SQLite", icone: `${DEVICON}/sqlite/sqlite-original.svg` },
         ],
     },
@@ -41,6 +43,7 @@ const CATEGORIAS = [
         nome: "Ferramentas",
         skills: [
             { nome: "Git", icone: `${DEVICON}/git/git-original.svg` },
+            { nome: "GitHub", icone: `${DEVICON}/github/github-original.svg`, claro: true },
             { nome: "VS Code", icone: `${DEVICON}/vscode/vscode-original.svg` },
         ],
     },

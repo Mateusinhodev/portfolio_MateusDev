@@ -5,11 +5,10 @@
     grid-template-columns: 1.2fr 1fr;
     align-items: center;
     gap: clamp(2rem, 6vw, 6rem);
-    max-width: 1200px;
     min-height: 100vh;
     min-height: 100svh;
     margin: 0 auto;
-    padding: 110px 5% 60px; /* 110px compensa o header fixo */
+    padding: 110px 13% 60px; /* 110px compensa o header fixo; 13% = mesmas margens do header */
 }
 
 .home-container {
@@ -176,7 +175,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-self: center;
+    justify-self: end; /* alinha a foto com o fim do menu */
 }
 
 /* Anel tracejado girando atrás da foto */
@@ -232,12 +231,13 @@
     .home {
         grid-template-columns: 1fr;
         gap: 2.5rem;
-        padding-top: 100px;
+        padding: 100px 5% 60px;
         text-align: center;
     }
 
     .home-img {
         order: -1; /* foto em cima do texto */
+        justify-self: center;
     }
 
     .home-img img {

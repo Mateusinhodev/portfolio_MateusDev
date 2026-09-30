@@ -4,8 +4,8 @@ import "./style.css";
 
 const CARGOS = [
     "Programador Front-End",
-    "Desenvolvedor React",
-    "Python & Django",
+    "Desenvolvedor ReactJS",
+    "Professor de Informática IFTO",
 ];
 
 const SOCIAIS = [
@@ -128,11 +128,10 @@ export default function Apresentacao() {
                 </h1>
                 <Cargo />
                 <p className="home-descricao">
-                    Atuo no desenvolvimento front-end, criando interfaces interativas e
-                    funcionais com JavaScript e React. Tenho também experiência com Python e
-                    Django, o que amplia minha visão e versatilidade em projetos web. Este
-                    portfólio reúne trabalhos que refletem minha evolução técnica e meu
-                    entusiasmo por tecnologia.
+                    Desenvolvedor Front-End especializado em JavaScript e React, com experiência 
+                    em TypeScript, Python e Django. Crio interfaces funcionais, acessíveis e bem 
+                    estruturadas, e como Professor de Informática no IFTO, aprendi a transformar 
+                    conceitos complexos em soluções claras.
                 </p>
                 <Acoes />
                 <Social />

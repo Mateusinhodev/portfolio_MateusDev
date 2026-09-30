@@ -5,7 +5,7 @@ const DESTAQUES = [
     {
         icone: "bx bx-code-alt",
         titulo: "Front-End",
-        texto: "HTML, CSS, JavaScript e React",
+        texto: "JavaScript, React e TypeScript",
     },
     {
         icone: "bx bx-server",
@@ -13,9 +13,9 @@ const DESTAQUES = [
         texto: "Python, Django e Firebase",
     },
     {
-        icone: "bx bx-book-open",
-        titulo: "Estudando",
-        texto: "React avançado e Firebase",
+        icone: "bx bx-chalkboard",
+        titulo: "Docência",
+        texto: "Professor de Informática no IFTO",
     },
 ];
 
@@ -37,29 +37,28 @@ export default function Sobre() {
 
                 <div className="sobre-descricao">
                     <h3 className="sobre-subtitulo">
-                        Desenvolvedor Front-End focado em boas experiências
+                        Desenvolvedor Front-End e Professor de Informática
                     </h3>
 
                     <p>
-                        Sou um Desenvolvedor Front-End com foco em criar interfaces funcionais e
-                        interativas, sempre buscando unir praticidade, clareza e uma boa
-                        experiência para o usuário. Tenho domínio em HTML, CSS, JavaScript e
-                        React, além de experiência com Bootstrap, Tailwind, Git, Firebase, Python
-                        e Django.
+                        Sou Desenvolvedor Front-End com domínio em JavaScript e React e experiência com
+                        TypeScript. Gosto de criar interfaces que sejam bonitas, mas principalmente fáceis de
+                        usar: código organizado, componentes reutilizáveis e atenção à acessibilidade e à
+                        experiência de quem está do outro lado da tela.
                     </p>
 
                     <p>
-                        Minha base em back-end foi fortalecida por meio de um trabalho
-                        acadêmico, que ampliou minha visão sobre o desenvolvimento web de forma
-                        mais completa. Atualmente, estou aprofundando meus conhecimentos em
-                        React e explorando mais recursos do Firebase, com o objetivo de criar
-                        aplicações modernas, eficientes e bem estruturadas.
+                        Sou formado em Ciências da Computação pelo IFTO, onde também tive contato com o
+                        back-end usando Python e Django, por exemplo desenvolvendo um sistema de controle de
+                        acesso aos laboratórios da instituição. Hoje atuo como Professor de Informática no
+                        IFTO, e ensinar me fez desenvolver algo que levo para cada projeto: a capacidade de
+                        explicar o complexo de forma simples e de trabalhar bem em equipe.
                     </p>
 
                     <p>
-                        Sou curioso, comprometido e apaixonado por aprender. Se você procura
-                        alguém com iniciativa, técnica e vontade de fazer acontecer,{" "}
-                        <strong>estou pronto para somar!</strong>
+                        Sou curioso, comprometido e estou sempre aprendendo. Busco oportunidades para criar
+                        produtos reais ao lado de times que valorizam qualidade. Se você tem um projeto ou uma
+                        vaga em mente, <strong>vamos conversar!</strong>
                     </p>
 
                     <ul className="sobre-destaques">

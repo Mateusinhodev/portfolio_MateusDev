@@ -1,114 +1,65 @@
-# <MateusDev /> — Portfólio
+<h1 align="center">&lt;MateusDev /&gt;</h1>
 
-Portfólio pessoal de **Mateus Rodrigues**, desenvolvedor Front-End. Aqui reúno quem sou, as tecnologias que uso, meus projetos e minha trajetória profissional e acadêmica.
+<p align="center">
+  Portfólio pessoal de <strong>Mateus Rodrigues</strong>, Desenvolvedor Front-End e Professor de Informática no IFTO.
+</p>
 
-🔗 **Acesse:** [link-do-seu-portfolio.vercel.app](https://link-do-seu-portfolio.vercel.app) <!-- TODO: troque pelo link do deploy -->
+<p align="center">
+  <a href="https://mateusinhodev.netlify.app"><strong>🔗 Acessar o portfólio</strong></a>
+</p>
 
-<!-- TODO: adicione um print do site em public/preview.png e descomente a linha abaixo -->
-<!-- ![Preview do portfólio](./public/preview.png) -->
+<!-- TODO: salve um print do site em public/preview.png e descomente a linha abaixo -->
+<!-- <p align="center"><img src="./public/preview.png" alt="Preview do portfólio" width="100%"></p> -->
 
 ---
 
-## ✨ Funcionalidades
+## 📌 Sobre o projeto
 
-- **Design responsivo:** layout pensado para celular, tablet e desktop
-- **Menu com destaque da seção ativa:** o link acompanha a rolagem da página, com menu hambúrguer animado no mobile
-- **Efeito de digitação na apresentação:** alterna entre os cargos e áreas de atuação
-- **Skills em abas:** organizadas por categoria (Front-end, Back-end, Design e Ferramentas)
-- **Cards de projetos:** com tecnologias usadas e links para o site e o código
-- **Linha do tempo:** separa formação e experiência profissional
-- **Formulário de contato funcional:** envio via EmailJS, com feedback de envio e proteção anti-spam
-- **Download do currículo** em PDF
-- **Acessibilidade:** HTML semântico, navegação por teclado, `aria-labels` e respeito à preferência de "reduzir movimento"
+Este é o meu portfólio: um site de página única que reúne quem sou, as tecnologias com que trabalho, meus projetos e minha trajetória profissional e acadêmica. Ele também é um projeto em si: construí a interface do zero com **React e CSS puro**, sem bibliotecas de componentes, com atenção a desempenho, acessibilidade e responsividade.
+
+## 🧭 Seções
+
+| Seção | O que mostra |
+| --- | --- |
+| **Home** | Apresentação com efeito de digitação, download do currículo e redes sociais |
+| **Sobre** | Minha história, formação e o que busco profissionalmente |
+| **Skills** | Tecnologias organizadas em abas por categoria |
+| **Projetos** | Cards com as tecnologias usadas e links para o site e o código |
+| **Experiências** | Linha do tempo com formação acadêmica e experiência profissional |
+| **Contato** | Formulário funcional com envio direto para o meu e-mail |
+
+## ✨ Destaques técnicos
+
+- **Performance:** removi bibliotecas de UI pesadas e reescrevi os componentes em CSS puro, reduzindo o JavaScript final de **193 kB para 52 kB** (gzip), cerca de 73% menor.
+- **Acessibilidade:** HTML semântico, navegação completa por teclado (inclusive nas abas), `aria-labels`, link "pular para o conteúdo" e respeito à preferência de reduzir movimento do sistema.
+- **Responsividade:** layout em Grid e Flexbox que se adapta do celular ao desktop, com tipografia fluida usando `clamp()`.
+- **Navegação inteligente:** o menu destaca a seção visível durante a rolagem (Intersection Observer) e, no celular, vira um menu hambúrguer animado.
+- **Formulário de contato:** envio via EmailJS, com feedback de sucesso ou erro e proteção anti-spam.
+- **Conteúdo orientado a dados:** projetos, skills e experiências vêm de arrays, o que facilita manter o portfólio atualizado sem mexer no layout.
 
 ## 🛠️ Tecnologias
 
-| Tecnologia | Uso |
-| --- | --- |
-| [React](https://react.dev/) | Construção da interface |
-| CSS3 | Estilização (sem frameworks), com Grid, Flexbox e animações |
-| [EmailJS](https://www.emailjs.com/) | Envio de e-mails pelo formulário de contato |
-| [Boxicons](https://boxicons.com/) | Ícones da interface |
-| [Devicon](https://devicon.dev/) | Ícones das tecnologias |
-| [Google Fonts (Inter)](https://fonts.google.com/specimen/Inter) | Tipografia |
+<p>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/EmailJS-F47C20?style=for-the-badge&logoColor=white" alt="EmailJS">
+</p>
 
-## 📂 Estrutura do projeto
+## 👨‍💻 Sobre mim
 
-```
-src/
-├── assets/              # Currículo (PDF) e imagens
-├── components/
-│   ├── Header/          # Cabeçalho fixo com menu de navegação
-│   └── Titulo/          # Título padrão das seções
-├── pages/
-│   ├── Home/            # Apresentação
-│   ├── Sobre/           # Sobre mim
-│   ├── Habilidades/     # Skills em abas
-│   ├── Projetos/        # Cards de projetos
-│   ├── Experiencias/    # Linha do tempo (formação e experiência)
-│   ├── Contato/         # Formulário de contato
-│   └── Footer/          # Rodapé
-├── App.js
-├── App.css              # Estilos globais
-└── index.js
-```
+Sou **Desenvolvedor Front-End** com domínio em JavaScript e React e experiência com TypeScript, Python e Django. Sou formado em Ciências da Computação e pós-graduado em Análise e Desenvolvimento de Sistemas, e atualmente atuo como **Professor EBTT de Informática no IFTO**. Gosto de criar interfaces claras e acessíveis e de explicar tecnologia de forma simples.
 
-## 🚀 Como rodar localmente
+## 📬 Contato
 
-**Pré-requisitos:** [Node.js](https://nodejs.org/) instalado.
+<p>
+  <a href="https://www.linkedin.com/in/mateus-rodrigues-a47002264/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="https://github.com/Mateusinhodev"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
+  <a href="https://www.instagram.com/mateus.mt11/"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
+</p>
 
-```bash
-# Clone o repositório
-git clone https://github.com/Mateusinhodev/portfolio_MateusDev.git
-
-# Entre na pasta
-cd portfolio_MateusDev
-
-# Instale as dependências
-npm install
-
-# Rode o projeto
-npm start
-```
-
-O site abre em `http://localhost:3000`.
-
-Para gerar a versão de produção:
-
-```bash
-npm run build
-```
-
-## ✏️ Como atualizar o conteúdo
-
-O conteúdo de cada seção fica em arrays no topo dos arquivos, então não é preciso mexer no layout:
-
-| O que mudar | Onde |
-| --- | --- |
-| Cargos do efeito de digitação e redes sociais | `pages/Home` → `CARGOS` e `SOCIAIS` |
-| Cards de destaque | `pages/Sobre` → `DESTAQUES` |
-| Tecnologias | `pages/Habilidades` → `CATEGORIAS` |
-| Projetos | `pages/Projetos` → `PROJETOS` |
-| Formação e experiência | `pages/Experiencias` → `FORMACAO` e `EXPERIENCIAS` |
-| Links de contato | `pages/Contato` → `CONTATOS` |
-
-## 📬 Configuração do formulário (EmailJS)
-
-O formulário usa o EmailJS. Para usar com a sua própria conta:
-
-1. Crie uma conta em [emailjs.com](https://www.emailjs.com/) e configure um serviço de e-mail e um template.
-2. No template, use as variáveis `{{from_name}}`, `{{from_email}}`, `{{from_assunto}}` e `{{message}}`, e coloque `{{reply_to}}` no campo **Reply To**.
-3. Troque os IDs no objeto `EMAILJS` em `src/pages/Contato`.
-4. Em **Account → Security**, restrinja o uso da chave ao domínio do seu site.
-
-## 👨‍💻 Autor
-
-**Mateus Rodrigues**, Desenvolvedor Front-End
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mateus-rodrigues-a47002264/)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Mateusinhodev)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/mateus.mt11/)
+Tem uma oportunidade ou projeto em mente? Me chame pelo [formulário do portfólio](https://mateusinhodev.netlify.app/#contato) ou pelo LinkedIn.
 
 ---
 
-Feito com 💙 por Mateus Rodrigues.
+<p align="center">© Mateus Rodrigues. Todos os direitos reservados.</p>

@@ -3,12 +3,19 @@ import "./style.css";
 
 // Para adicionar um item, inclua um objeto na lista certa.
 // "descricao" é opcional: se ficar vazia, o card só mostra cargo, local e período.
+// "selo" é opcional: mostra uma etiqueta (ex.: "Atual", "Em andamento") e destaca o ponto na linha.
 const EXPERIENCIAS = [
+    {
+        cargo: "Professor EBTT de Informática",
+        local: "IFTO – Instituto Federal do Tocantins",
+        periodo: "2025 – Presente",
+        selo: "Atual",
+        descricao: "", // TODO: disciplinas/cursos em que você leciona
+    },
     {
         cargo: "Técnico em Informática – TI",
         local: "Prefeitura Municipal de Guaraí",
-        periodo: "2024 – Presente",
-        atual: true,
+        periodo: "2024 – 2025", // TODO: confirme se ainda está neste cargo
         descricao: "", // TODO: 1 ou 2 frases sobre o que você faz
     },
     {
@@ -20,6 +27,19 @@ const EXPERIENCIAS = [
 ];
 
 const FORMACAO = [
+    {
+        cargo: "Pós-graduação em Educação e suas Tecnologias",
+        local: "IFTO – Instituto Federal do Tocantins",
+        periodo: "2026 – Presente",
+        selo: "Em andamento",
+        descricao: "",
+    },
+    {
+        cargo: "Pós-graduação em Análise e Desenvolvimento de Sistemas",
+        local: "Anhanguera",
+        periodo: "2025 – 2026",
+        descricao: "",
+    },
     {
         cargo: "Ciências da Computação",
         local: "IFTO – Instituto Federal do Tocantins, Campus Colinas",
@@ -37,14 +57,14 @@ function Linha({ titulo, icone, itens }) {
             </h3>
 
             <ol className="timeline">
-                {itens.map(({ cargo, local, periodo, atual, descricao }) => (
-                    <li key={cargo + periodo} className={`timeline-item ${atual ? "atual" : ""}`}>
+                {itens.map(({ cargo, local, periodo, selo, descricao }) => (
+                    <li key={cargo + periodo} className={`timeline-item ${selo ? "atual" : ""}`}>
                         <span className="timeline-ponto" aria-hidden="true"></span>
 
                         <div className="timeline-card">
                             <div className="timeline-topo">
                                 <span className="timeline-periodo">{periodo}</span>
-                                {atual && <span className="timeline-badge">Atual</span>}
+                                {selo && <span className="timeline-badge">{selo}</span>}
                             </div>
                             <h4 className="timeline-cargo">{cargo}</h4>
                             <p className="timeline-local">{local}</p>

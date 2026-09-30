@@ -11,7 +11,7 @@ const LINKS = [
 
 function Logo() {
     return (
-        <a href="#top" className="logo" aria-label="MateusDev, voltar ao topo">
+        <a href="#home" className="logo" aria-label="MateusDev, voltar ao topo">
             {"<MateusDev />"}
         </a>
     );
@@ -53,8 +53,9 @@ function Menu() {
 
     // Destaca no menu a seção que está visível na tela
     useEffect(() => {
-        const sections = LINKS
-            .map(({ id }) => document.getElementById(id))
+        // Inclui a Home para que nenhum link fique ativo enquanto ela estiver na tela
+        const sections = ["home", ...LINKS.map(({ id }) => id)]
+            .map((id) => document.getElementById(id))
             .filter(Boolean);
 
         const observer = new IntersectionObserver(
