@@ -1,66 +1,132 @@
+import { useRef, useState } from "react";
 import Titulo from "../../components/Titulo";
-import { useState } from "react";
+import "./style.css";
 
-import "./style.css"
+const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
+
+// Para adicionar uma skill nova, basta incluir um item na categoria certa.
+// "claro: true" deixa o ícone branco (útil para logos escuros, como o do Django).
+const CATEGORIAS = [
+    {
+        id: "frontend",
+        nome: "Front-end",
+        skills: [
+            { nome: "HTML", icone: `${DEVICON}/html5/html5-original.svg` },
+            { nome: "CSS", icone: `${DEVICON}/css3/css3-original.svg` },
+            { nome: "JavaScript", icone: `${DEVICON}/javascript/javascript-original.svg` },
+            { nome: "React", icone: `${DEVICON}/react/react-original.svg` },
+            { nome: "Bootstrap", icone: `${DEVICON}/bootstrap/bootstrap-original.svg` },
+            { nome: "Tailwind CSS", icone: `${DEVICON}/tailwindcss/tailwindcss-original.svg` },
+        ],
+    },
+    {
+        id: "backend",
+        nome: "Back-end",
+        skills: [
+            { nome: "Python", icone: `${DEVICON}/python/python-original.svg` },
+            { nome: "Django", icone: `${DEVICON}/django/django-plain.svg`, claro: true },
+            { nome: "Firebase", icone: `${DEVICON}/firebase/firebase-original.svg` },
+            { nome: "SQLite", icone: `${DEVICON}/sqlite/sqlite-original.svg` },
+        ],
+    },
+    {
+        id: "design",
+        nome: "UI/UX Design",
+        skills: [
+            { nome: "Figma", icone: `${DEVICON}/figma/figma-original.svg` },
+        ],
+    },
+    {
+        id: "ferramentas",
+        nome: "Ferramentas",
+        skills: [
+            { nome: "Git", icone: `${DEVICON}/git/git-original.svg` },
+            { nome: "VS Code", icone: `${DEVICON}/vscode/vscode-original.svg` },
+        ],
+    },
+];
 
 export default function Skills() {
+    const [ativa, setAtiva] = useState(0);
+    const abasRef = useRef([]);
 
-    const [toggleState, setToggleState] = useState(1);
+    // Navegação pelas abas com as setas do teclado, Home e End
+    const onKeyDown = (e) => {
+        const total = CATEGORIAS.length;
+        let proxima = null;
 
-    const toggleTab = (index) => {
-        setToggleState(index)
-    }
+        if (e.key === "ArrowRight") proxima = (ativa + 1) % total;
+        if (e.key === "ArrowLeft") proxima = (ativa - 1 + total) % total;
+        if (e.key === "Home") proxima = 0;
+        if (e.key === "End") proxima = total - 1;
 
-    return(
-        <div id="skills" className="skills-container">
-            <Titulo nome={"SKILLS"}/>
+        if (proxima !== null) {
+            e.preventDefault();
+            setAtiva(proxima);
+            abasRef.current[proxima]?.focus();
+        }
+    };
+
+    const categoria = CATEGORIAS[ativa];
+
+    return (
+        <section id="skills" className="skills" aria-labelledby="skills-titulo">
+            <Titulo
+                id="skills-titulo"
+                nome="Skills"
+                subtitulo="Tecnologias e ferramentas que uso no dia a dia"
+            />
+
             <div className="skills-conteudo">
-
-                <div className="bloc-tabs">
-                    <div className={toggleState === 1 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(1)}>Front-end</div>
-                    <div className={toggleState === 2 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(2)}>Back-end</div>
-                    <div className={toggleState === 3 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(3)}>UI/UX Design</div>
-                    <div className={toggleState === 4 ? "tabs active-tabs" : "tabs"} onClick={() => toggleTab(4)}>Ferramentas</div>
+                <div className="skills-abas" role="tablist" aria-label="Categorias de skills">
+                    {CATEGORIAS.map((cat, i) => (
+                        <button
+                            key={cat.id}
+                            ref={(el) => (abasRef.current[i] = el)}
+                            type="button"
+                            role="tab"
+                            id={`aba-${cat.id}`}
+                            aria-selected={ativa === i}
+                            aria-controls={`painel-${cat.id}`}
+                            tabIndex={ativa === i ? 0 : -1}
+                            className={`skills-aba ${ativa === i ? "ativa" : ""}`}
+                            onClick={() => setAtiva(i)}
+                            onKeyDown={onKeyDown}
+                        >
+                            {cat.nome}
+                            <span className="skills-contador">{cat.skills.length}</span>
+                        </button>
+                    ))}
                 </div>
 
-                <div className="content-tabs">
-                    <div className={toggleState === 1 ? "content active-content" : "content"}>
-                        <div className="stacks-icons">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML"/>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS"/>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"/>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="REACT"/>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="BOOTSTRAP"/>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="TAILWINDCSS"/>
-                        </div>
-                    </div>
-
-                    <div className={toggleState === 2 ? "content active-content" : "content"}>
-                        <div className="stacks-icons">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="PYTHON"/>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" alt="DJANGO"/>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" alt="FIREBASE"/>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" alt="SQLITE"/>
-                        </div>
-                    </div>
-
-                    <div className={toggleState === 3 ? "content active-content" : "content"}>
-                        <div className="stacks-icons">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="FIGMA"/>
-                        </div>
-                    </div>
-
-                    <div className={toggleState === 4 ? "content active-content" : "content"}>
-                        <div className="stacks-icons">
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="GIT"/>
-                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VSCODE"/>
-                        </div>
-                    </div>
+                <div
+                    key={categoria.id} /* recria o painel para reiniciar a animação */
+                    role="tabpanel"
+                    id={`painel-${categoria.id}`}
+                    aria-labelledby={`aba-${categoria.id}`}
+                    className="skills-painel"
+                >
+                    <ul className="skills-grid">
+                        {categoria.skills.map(({ nome, icone, claro }, i) => (
+                            <li
+                                key={nome}
+                                className="skill-card"
+                                style={{ animationDelay: `${i * 60}ms` }}
+                            >
+                                <img
+                                    src={icone}
+                                    alt=""
+                                    width="48"
+                                    height="48"
+                                    loading="lazy"
+                                    className={claro ? "icone-claro" : ""}
+                                />
+                                <span>{nome}</span>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
-
-                    
             </div>
-        </div>
+        </section>
     );
 }
-

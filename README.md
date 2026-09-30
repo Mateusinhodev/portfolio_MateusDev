@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+# <MateusDev /> — Portfólio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Portfólio pessoal de **Mateus Rodrigues**, desenvolvedor Front-End. Aqui reúno quem sou, as tecnologias que uso, meus projetos e minha trajetória profissional e acadêmica.
 
-## Available Scripts
+🔗 **Acesse:** [link-do-seu-portfolio.vercel.app](https://link-do-seu-portfolio.vercel.app) <!-- TODO: troque pelo link do deploy -->
 
-In the project directory, you can run:
+<!-- TODO: adicione um print do site em public/preview.png e descomente a linha abaixo -->
+<!-- ![Preview do portfólio](./public/preview.png) -->
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Funcionalidades
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Design responsivo:** layout pensado para celular, tablet e desktop
+- **Menu com destaque da seção ativa:** o link acompanha a rolagem da página, com menu hambúrguer animado no mobile
+- **Efeito de digitação na apresentação:** alterna entre os cargos e áreas de atuação
+- **Skills em abas:** organizadas por categoria (Front-end, Back-end, Design e Ferramentas)
+- **Cards de projetos:** com tecnologias usadas e links para o site e o código
+- **Linha do tempo:** separa formação e experiência profissional
+- **Formulário de contato funcional:** envio via EmailJS, com feedback de envio e proteção anti-spam
+- **Download do currículo** em PDF
+- **Acessibilidade:** HTML semântico, navegação por teclado, `aria-labels` e respeito à preferência de "reduzir movimento"
 
-### `npm test`
+## 🛠️ Tecnologias
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Tecnologia | Uso |
+| --- | --- |
+| [React](https://react.dev/) | Construção da interface |
+| CSS3 | Estilização (sem frameworks), com Grid, Flexbox e animações |
+| [EmailJS](https://www.emailjs.com/) | Envio de e-mails pelo formulário de contato |
+| [Boxicons](https://boxicons.com/) | Ícones da interface |
+| [Devicon](https://devicon.dev/) | Ícones das tecnologias |
+| [Google Fonts (Inter)](https://fonts.google.com/specimen/Inter) | Tipografia |
 
-### `npm run build`
+## 📂 Estrutura do projeto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+src/
+├── assets/              # Currículo (PDF) e imagens
+├── components/
+│   ├── Header/          # Cabeçalho fixo com menu de navegação
+│   └── Titulo/          # Título padrão das seções
+├── pages/
+│   ├── Home/            # Apresentação
+│   ├── Sobre/           # Sobre mim
+│   ├── Habilidades/     # Skills em abas
+│   ├── Projetos/        # Cards de projetos
+│   ├── Experiencias/    # Linha do tempo (formação e experiência)
+│   ├── Contato/         # Formulário de contato
+│   └── Footer/          # Rodapé
+├── App.js
+├── App.css              # Estilos globais
+└── index.js
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Como rodar localmente
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Pré-requisitos:** [Node.js](https://nodejs.org/) instalado.
 
-### `npm run eject`
+```bash
+# Clone o repositório
+git clone https://github.com/Mateusinhodev/portfolio_MateusDev.git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Entre na pasta
+cd portfolio_MateusDev
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Instale as dependências
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Rode o projeto
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+O site abre em `http://localhost:3000`.
 
-## Learn More
+Para gerar a versão de produção:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm run build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## ✏️ Como atualizar o conteúdo
 
-### Code Splitting
+O conteúdo de cada seção fica em arrays no topo dos arquivos, então não é preciso mexer no layout:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| O que mudar | Onde |
+| --- | --- |
+| Cargos do efeito de digitação e redes sociais | `pages/Home` → `CARGOS` e `SOCIAIS` |
+| Cards de destaque | `pages/Sobre` → `DESTAQUES` |
+| Tecnologias | `pages/Habilidades` → `CATEGORIAS` |
+| Projetos | `pages/Projetos` → `PROJETOS` |
+| Formação e experiência | `pages/Experiencias` → `FORMACAO` e `EXPERIENCIAS` |
+| Links de contato | `pages/Contato` → `CONTATOS` |
 
-### Analyzing the Bundle Size
+## 📬 Configuração do formulário (EmailJS)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+O formulário usa o EmailJS. Para usar com a sua própria conta:
 
-### Making a Progressive Web App
+1. Crie uma conta em [emailjs.com](https://www.emailjs.com/) e configure um serviço de e-mail e um template.
+2. No template, use as variáveis `{{from_name}}`, `{{from_email}}`, `{{from_assunto}}` e `{{message}}`, e coloque `{{reply_to}}` no campo **Reply To**.
+3. Troque os IDs no objeto `EMAILJS` em `src/pages/Contato`.
+4. Em **Account → Security**, restrinja o uso da chave ao domínio do seu site.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 👨‍💻 Autor
 
-### Advanced Configuration
+**Mateus Rodrigues**, Desenvolvedor Front-End
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mateus-rodrigues-a47002264/)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Mateusinhodev)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/mateus.mt11/)
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feito com 💙 por Mateus Rodrigues.

@@ -1,116 +1,206 @@
-/* Estilização geral do container */
-.sobre-container {
-    background-color: #374151;
-    min-height: 100vh; /* Agora ocupa toda a altura da tela */
+/* ===== Seção Sobre ===== */
+.sobre {
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 60px 5% 80px;
+    background-color: #181826; /* um tom acima do fundo do site, para separar as seções */
+}
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    align-items: center;
+    gap: clamp(2.5rem, 6vw, 5rem);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== Imagem ===== */
+.sobre-imagem {
+    position: relative;
+    justify-self: center;
+    width: 100%;
+    max-width: 440px;
+}
+
+/* Moldura deslocada atrás da foto */
+.sobre-imagem::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    transform: translate(16px, 16px);
+    transition: transform 0.4s ease;
+}
+
+.sobre-imagem img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    transition: transform 0.4s ease;
+}
+
+.sobre-imagem:hover img {
+    transform: translate(-6px, -6px);
+}
+
+.sobre-imagem:hover::before {
+    transform: translate(22px, 22px);
+}
+
+/* ===== Texto ===== */
+.sobre-descricao {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+    gap: 1rem;
+    color: #c5c8cf;
 }
 
-/* Layout do conteúdo principal */
-.sobre-conteudo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 100px; /* Reduzindo o espaçamento para evitar excesso de espaço */
-    max-width: 1200px;
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-/* Imagem de perfil */
-.sobre-imagem {
-    width: 500px;
-    height: 500px;
-    border-radius: 20px;
-    object-fit: cover;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-}
-
-.sobre-imagem:hover {
-    transform: scale(1.05);
-}
-
-/* Descrição ao lado da imagem */
-.sobre-descricao {
-    max-width: 500px;
-    text-align: justify;
-    color: #ffffff;
-    padding: 0 15px; /* Adicionando um padding para melhor alinhamento */
-}
-
-/* Subtítulo */
 .sobre-subtitulo {
-    font-size: 21px;
-    font-weight: bold;
-    color: #f9fafb;
-    margin-bottom: 10px;
+    margin: 0 0 0.25rem;
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    font-weight: 700;
+    line-height: 1.3;
+    color: #fff;
 }
 
-/* Texto */
-.sobre-texto {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.6;
+.sobre-descricao p {
+    margin: 0;
+    font-size: clamp(1rem, 1.4vw, 1.1rem);
+    line-height: 1.75;
 }
 
-/* Responsividade */
-@media (max-width: 1024px) {
+.sobre-descricao strong {
+    color: #fff;
+}
+
+/* ===== Cards de destaque ===== */
+.sobre-destaques {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 0.75rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.destaque-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.destaque-card:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+}
+
+.destaque-card i {
+    flex-shrink: 0;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.destaque-card div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.destaque-card strong {
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+.destaque-card span {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #9a9ea8;
+}
+
+/* ===== Botão ===== */
+.sobre-cta {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 6px;
+    margin-top: 0.5rem;
+    padding: 0.8rem 1.6rem;
+    font-weight: 600;
+    color: #13131f;
+    text-decoration: none;
+    background-color: #fff;
+    border-radius: 999px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sobre-cta i {
+    font-size: 1.3rem;
+    transition: transform 0.3s;
+}
+
+.sobre-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
+}
+
+.sobre-cta:hover i {
+    transform: translateX(4px);
+}
+
+.sobre-cta:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 960px) {
     .sobre-conteudo {
-        flex-direction: column;
-        text-align: center;
-        gap: 50px; /* Reduzindo ainda mais o espaçamento */
+        grid-template-columns: 1fr;
     }
 
     .sobre-imagem {
-        width: 350px;
-        height: 350px;
+        max-width: 320px;
     }
 
     .sobre-descricao {
-        width: 90%;
-        text-align: center;
+        max-width: 640px;
+        margin: 0 auto;
     }
 
     .sobre-subtitulo {
         text-align: center;
-        font-size: 22px;
     }
 
-    .sobre-texto {
-        font-size: 16px;
-        text-align: justify;
+    .sobre-cta {
+        align-self: center;
     }
 }
 
-@media (max-width: 768px) {
-    .titulo {
-        font-size: 20px;
-        padding: 10px 16px;
+@media (max-width: 600px) {
+    .sobre-destaques {
+        grid-template-columns: 1fr;
     }
 
     .sobre-imagem {
-        width: 280px;
-        height: 280px;
+        max-width: 260px;
     }
+}
 
-    .sobre-subtitulo {
-        font-size: 20px;
-        font-weight: bold;
-        color: #f9fafb;
-        margin-bottom: 10px;
-    }
-
-    .sobre-texto {
-        font-size: 12px;
-        text-align: justify;
-    }
-
-    .sobre-container {
-        padding: 15px;
+@media (prefers-reduced-motion: reduce) {
+    .sobre * ,
+    .sobre *::before {
+        transition: none !important;
     }
 }

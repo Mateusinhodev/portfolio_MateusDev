@@ -1,124 +1,75 @@
-import React from "react";
-import "./style.css"
 import Titulo from "../../components/Titulo";
+import "./style.css";
 
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import WorkIcon from '@mui/icons-material/Work';
-import SchoolIcon from '@mui/icons-material/School';
+// Para adicionar um item, inclua um objeto na lista certa.
+// "descricao" é opcional: se ficar vazia, o card só mostra cargo, local e período.
+const EXPERIENCIAS = [
+    {
+        cargo: "Técnico em Informática – TI",
+        local: "Prefeitura Municipal de Guaraí",
+        periodo: "2024 – Presente",
+        atual: true,
+        descricao: "", // TODO: 1 ou 2 frases sobre o que você faz
+    },
+    {
+        cargo: "Estágio em Tecnologia da Informação – TI",
+        local: "Prefeitura Municipal de Guaraí",
+        periodo: "2022 – 2023",
+        descricao: "", // TODO: 1 ou 2 frases sobre o que você fazia
+    },
+];
 
-import Typography from '@mui/material/Typography';
+const FORMACAO = [
+    {
+        cargo: "Ciências da Computação",
+        local: "IFTO – Instituto Federal do Tocantins, Campus Colinas",
+        periodo: "2021 – 2025",
+        descricao: "",
+    },
+];
+
+function Linha({ titulo, icone, itens }) {
+    return (
+        <div className="linha">
+            <h3 className="linha-titulo">
+                <i className={icone} aria-hidden="true"></i>
+                {titulo}
+            </h3>
+
+            <ol className="timeline">
+                {itens.map(({ cargo, local, periodo, atual, descricao }) => (
+                    <li key={cargo + periodo} className={`timeline-item ${atual ? "atual" : ""}`}>
+                        <span className="timeline-ponto" aria-hidden="true"></span>
+
+                        <div className="timeline-card">
+                            <div className="timeline-topo">
+                                <span className="timeline-periodo">{periodo}</span>
+                                {atual && <span className="timeline-badge">Atual</span>}
+                            </div>
+                            <h4 className="timeline-cargo">{cargo}</h4>
+                            <p className="timeline-local">{local}</p>
+                            {descricao && <p className="timeline-descricao">{descricao}</p>}
+                        </div>
+                    </li>
+                ))}
+            </ol>
+        </div>
+    );
+}
 
 export default function Experiencias() {
     return (
-        <div id="experiencias" className="experiencia-container">
-            <Titulo nome={"EXPERIÊNCIAS"} />
-            <div className="experiencia-conteudo">
-                <Timeline position="alternate">
-                    <TimelineItem>
-                        <TimelineOppositeContent
-                            sx={{ 
-                                m: 'auto 0', 
-                                fontSize: { xs: "0.75rem", sm: "0.9rem", md: "1rem" }
-                            }}
-                            align="right"
-                            color="white"
-                        >
-                            2021 - 2025
-                        </TimelineOppositeContent>
-                        <TimelineSeparator>
-                            <TimelineConnector />
-                            <TimelineDot>
-                                <SchoolIcon />
-                            </TimelineDot>
-                            <TimelineConnector />
-                        </TimelineSeparator>
-                        <TimelineContent sx={{ py: '25px', px: 2 }}>
-                            <Typography 
-                                variant="h6" 
-                                component="span" 
-                                sx={{ fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" } }}
-                            >
-                                Ciências da Computação
-                            </Typography>
-                            <Typography 
-                                sx={{ fontSize: { xs: "0.8rem", sm: "1rem", md: "1.1rem" } }}
-                            >
-                                IFTO - Instituto Federal do Tocantins Campus Colinas
-                            </Typography>
-                        </TimelineContent>
-                    </TimelineItem>
-                    <TimelineItem>
-                        <TimelineOppositeContent
-                            sx={{ 
-                                m: 'auto 0', 
-                                fontSize: { xs: "0.75rem", sm: "0.9rem", md: "1rem" }
-                            }}
-                            color="white"
-                        >
-                            2022 - 2023
-                        </TimelineOppositeContent>
-                        <TimelineSeparator>
-                            <TimelineConnector />
-                            <TimelineDot>
-                                <WorkIcon />
-                            </TimelineDot>
-                            <TimelineConnector />
-                        </TimelineSeparator>
-                        <TimelineContent sx={{ py: '25px', px: 2 }}>
-                            <Typography 
-                                variant="h6" 
-                                component="span" 
-                                sx={{ fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" } }}
-                            >
-                                Estágio em Tecnologia da Informação - TI
-                            </Typography>
-                            <Typography 
-                                sx={{ fontSize: { xs: "0.8rem", sm: "1rem", md: "1.1rem" } }}
-                            >
-                                Prefeitura Municipal de Guarai
-                            </Typography>
-                        </TimelineContent>
-                    </TimelineItem>
-                    <TimelineItem>
-                        <TimelineOppositeContent
-                            sx={{ 
-                                m: 'auto 0', 
-                                fontSize: { xs: "0.75rem", sm: "0.9rem", md: "1rem" }
-                            }}
-                            color="white"
-                        >
-                            2024 - Presente
-                        </TimelineOppositeContent>
-                        <TimelineSeparator>
-                            <TimelineConnector />
-                            <TimelineDot>
-                                <WorkIcon />
-                            </TimelineDot>
-                            <TimelineConnector />
-                        </TimelineSeparator>
-                        <TimelineContent sx={{ py: '25px', px: 2 }}>
-                            <Typography 
-                                variant="h6" 
-                                component="span" 
-                                sx={{ fontSize: { xs: "1rem", sm: "1.2rem", md: "1.5rem" } }}
-                            >
-                                Técnico em Informática - TI
-                            </Typography>
-                            <Typography 
-                                sx={{ fontSize: { xs: "0.8rem", sm: "1rem", md: "1.1rem" } }}
-                            >
-                                Prefeitura Municipal de Guarai
-                            </Typography>
-                        </TimelineContent>
-                    </TimelineItem>
-                </Timeline>
+        <section id="experiencias" className="experiencias" aria-labelledby="experiencias-titulo">
+            <Titulo
+                id="experiencias-titulo"
+                nome="Experiências"
+                subtitulo="Minha trajetória profissional e acadêmica"
+            />
+
+            <div className="experiencias-conteudo">
+                <Linha titulo="Formação" icone="bx bxs-graduation" itens={FORMACAO} />
+                <Linha titulo="Experiência" icone="bx bx-briefcase" itens={EXPERIENCIAS} />
             </div>
-        </div>
+        </section>
     );
 }
