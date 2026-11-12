@@ -12,6 +12,8 @@ export const TECNOLOGIAS = {
     "Next.js": { icone: `${DEVICON}/nextjs/nextjs-original.svg`, claro: true },
     Bootstrap: { icone: `${DEVICON}/bootstrap/bootstrap-original.svg` },
     "Tailwind CSS": { icone: `${DEVICON}/tailwindcss/tailwindcss-original.svg` },
+    Vite: { icone: `${DEVICON}/vitejs/vitejs-original.svg` },
+    Supabase: { icone: `${DEVICON}/supabase/supabase-original.svg` },
     "Node.js": { icone: `${DEVICON}/nodejs/nodejs-original.svg` },
     Python: { icone: `${DEVICON}/python/python-original.svg` },
     Django: { icone: `${DEVICON}/django/django-plain.svg`, claro: true },
@@ -19,4 +21,5 @@ export const TECNOLOGIAS = {
     MySQL: { icone: `${DEVICON}/mysql/mysql-original.svg`, claro: true },
     SQLite: { icone: `${DEVICON}/sqlite/sqlite-original.svg` },
     Figma: { icone: `${DEVICON}/figma/figma-original.svg` },
+    Swagger: { icone: `${DEVICON}/swagger/swagger-original.svg` },
 };

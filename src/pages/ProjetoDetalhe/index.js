@@ -49,6 +49,7 @@ export default function ProjetoDetalhe() {
         cor,
         site,
         codigo,
+        outrosLinks = [],
         descricao = [],
         funcionalidades = [],
         tecnologias = [],
@@ -97,7 +98,7 @@ export default function ProjetoDetalhe() {
                         </dl>
                     )}
 
-                    {(site || codigo) && (
+                    {(site || codigo || outrosLinks.length > 0) && (
                         <div className="detalhe-acoes">
                             {site && (
                                 <a
@@ -121,6 +122,18 @@ export default function ProjetoDetalhe() {
                                     Ver código
                                 </a>
                             )}
+                            {outrosLinks.map(({ texto, url }) => (
+                                <a
+                                    key={url}
+                                    href={url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="projeto-btn projeto-btn-secundario"
+                                >
+                                    <i className="bx bx-history" aria-hidden="true"></i>
+                                    {texto}
+                                </a>
+                            ))}
                         </div>
                     )}
                 </div>

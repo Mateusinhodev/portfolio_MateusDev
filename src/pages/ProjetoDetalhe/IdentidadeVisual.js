@@ -42,7 +42,7 @@ export default function IdentidadeVisual({ identidade = {}, logo, titulo }) {
     if (!logo && !cores.length && !fontes.length) return null;
 
     return (
-        <div className="identidade">
+        <div className={`identidade ${logo ? "" : "sem-logo"}`}>
             {logo && (
                 <figure className="identidade-logo" style={{ backgroundColor: fundoLogo }}>
                     <img src={logo} alt={`Logo do projeto ${titulo}`} />
