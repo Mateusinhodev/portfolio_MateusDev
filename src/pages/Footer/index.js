@@ -38,7 +38,7 @@ export default function Footer() {
         <footer className="footer">
             <div className="footer-conteudo">
                 <div className="footer-marca">
-                    <a href="#home" className="footer-logo">
+                    <a href="/#home" className="footer-logo">
                         {"<MateusDev />"}
                     </a>
                     <p className="footer-frase">
@@ -51,7 +51,7 @@ export default function Footer() {
                     <ul>
                         {LINKS.map(({ id, label }) => (
                             <li key={id}>
-                                <a href={`#${id}`}>{label}</a>
+                                <a href={`/#${id}`}>{label}</a>
                             </li>
                         ))}
                     </ul>
@@ -75,10 +75,16 @@ export default function Footer() {
 
             <div className="footer-base">
                 <p>© {ano} Mateus Rodrigues. Todos os direitos reservados.</p>
-                <a href="#home" className="footer-topo">
+                {/* Botão: volta ao topo da página atual (home ou página de projeto) */}
+                <button
+                    type="button"
+                    className="footer-topo"
+                    style={{ padding: 0, font: "inherit", background: "none", border: 0, cursor: "pointer" }}
+                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                >
                     Voltar ao topo
                     <i className="bx bx-up-arrow-alt" aria-hidden="true"></i>
-                </a>
+                </button>
             </div>
         </footer>
     );

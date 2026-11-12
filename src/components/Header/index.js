@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./style.css";
 
 const LINKS = [
@@ -11,7 +12,7 @@ const LINKS = [
 
 function Logo() {
     return (
-        <a href="#home" className="logo" aria-label="MateusDev, voltar ao topo">
+        <a href="/#home" className="logo" aria-label="MateusDev, voltar ao topo">
             {"<MateusDev />"}
         </a>
     );
@@ -21,6 +22,7 @@ function Menu() {
     const [open, setOpen] = useState(false);
     const [active, setActive] = useState("");
     const navRef = useRef(null);
+    const { pathname } = useLocation();
 
     // Fecha o menu com Esc ou clicando fora dele
     useEffect(() => {
@@ -53,6 +55,13 @@ function Menu() {
 
     // Destaca no menu a seção que está visível na tela
     useEffect(() => {
+        // Na biblioteca e nas páginas de projeto, "Projetos" fica sempre ativo
+        if (pathname.startsWith("/projetos")) {
+            setActive("projetos");
+            return;
+        }
+        setActive("");
+
         // Inclui a Home para que nenhum link fique ativo enquanto ela estiver na tela
         const sections = ["home", ...LINKS.map(({ id }) => id)]
             .map((id) => document.getElementById(id))
@@ -69,7 +78,7 @@ function Menu() {
 
         sections.forEach((section) => observer.observe(section));
         return () => observer.disconnect();
-    }, []);
+    }, [pathname]); // refaz ao trocar de página, porque as seções mudam
 
     return (
         <nav className="nav" ref={navRef} aria-label="Navegação principal">
@@ -90,7 +99,7 @@ function Menu() {
                 {LINKS.map(({ id, label }) => (
                     <li key={id} className="menu-item">
                         <a
-                            href={`#${id}`}
+                            href={`/#${id}`} /* "/" na frente: funciona também nas páginas de projeto */
                             className={active === id ? "active" : ""}
                             aria-current={active === id ? "true" : undefined}
                             onClick={() => setOpen(false)}

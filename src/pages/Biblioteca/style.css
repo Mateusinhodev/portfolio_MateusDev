@@ -1,0 +1,159 @@
+.biblioteca-topo {
+    max-width: 720px;
+    margin: 0 auto 36px;
+    text-align: center;
+}
+
+.biblioteca-topo h1 {
+    margin: 0 0 12px;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: #fff;
+}
+
+.biblioteca-topo p {
+    margin: 0;
+    font-size: clamp(1rem, 1.6vw, 1.1rem);
+    line-height: 1.7;
+    color: #9a9ea8;
+}
+
+/* ===== Filtros ===== */
+.biblioteca-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    max-width: 1188px;
+    margin: 0 auto 16px;
+}
+
+.filtro-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filtro-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #c5c8cf;
+    background-color: #181826;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+
+.filtro-chip span {
+    padding: 0 7px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.6;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+}
+
+.filtro-chip:hover {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.filtro-chip.ativo {
+    color: #13131f;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.filtro-chip.ativo span {
+    background-color: rgba(19, 19, 31, 0.1);
+}
+
+.filtro-chip:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+.filtro-busca {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 0 1 320px;
+    margin-left: auto;
+}
+
+.filtro-busca i {
+    position: absolute;
+    left: 14px;
+    font-size: 1.2rem;
+    color: #6c7079;
+    pointer-events: none;
+}
+
+.filtro-busca input {
+    width: 100%;
+    padding: 10px 14px 10px 42px;
+    font: inherit;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #181826;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.filtro-busca input::placeholder {
+    color: #6c7079;
+}
+
+.filtro-busca input:focus {
+    outline: none;
+    border-color: #fff;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.12);
+}
+
+.biblioteca-contagem {
+    max-width: 1188px;
+    margin: 0 auto 20px;
+    font-size: 0.9rem;
+    color: #6c7079;
+}
+
+/* ===== Nenhum resultado ===== */
+.biblioteca-vazio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    padding: 60px 20px;
+    text-align: center;
+    color: #9a9ea8;
+    border: 1px dashed rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+}
+
+.biblioteca-vazio i {
+    font-size: 2.5rem;
+}
+
+.biblioteca-vazio p {
+    margin: 0;
+}
+
+.biblioteca-vazio .projeto-btn {
+    flex: 0 0 auto;
+}
+
+@media (max-width: 700px) {
+    .filtro-busca {
+        flex: 1 1 100%;
+        margin-left: 0;
+    }
+}

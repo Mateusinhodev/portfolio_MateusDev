@@ -1,0 +1,92 @@
+/* ===== Estilos compartilhados das páginas (biblioteca, projeto, 404) ===== */
+
+.pagina {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 110px 5% 80px; /* 110px compensa o header fixo */
+}
+
+/* Espaço reservado enquanto a página carrega */
+.pagina-carregando {
+    min-height: 100vh;
+}
+
+/* Migalhas de pão: Início / Projetos / ... */
+.migalhas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 32px;
+    font-size: 0.9rem;
+    color: #6c7079;
+}
+
+.migalhas a {
+    color: #9a9ea8;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.migalhas a:hover {
+    color: #fff;
+}
+
+.migalhas a:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.migalhas [aria-current="page"] {
+    color: #c5c8cf;
+}
+
+/* Página 404 */
+.pagina-erro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
+}
+
+.pagina-erro-codigo {
+    margin: 0;
+    font-family: "Fira Code", "Consolas", monospace;
+    font-size: clamp(3rem, 10vw, 5rem);
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.15);
+}
+
+.pagina-erro h1 {
+    margin: 0;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    color: #fff;
+}
+
+.pagina-erro p {
+    margin: 0 0 8px;
+    color: #9a9ea8;
+}
+
+.pagina-erro .projeto-btn {
+    flex: 0 0 auto;
+}
+
+/* Texto só para leitores de tela */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

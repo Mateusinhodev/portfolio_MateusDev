@@ -1,0 +1,46 @@
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tecnologia {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #c5c8cf;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+}
+
+.tecnologia img {
+    width: 18px;
+    height: 18px;
+}
+
+.tecnologia img.icone-claro {
+    filter: brightness(0) invert(1);
+}
+
+/* Versão maior, usada na página do projeto */
+.tecnologias-grande {
+    gap: 10px;
+}
+
+.tecnologias-grande .tecnologia {
+    gap: 8px;
+    padding: 8px 14px;
+    font-size: 0.95rem;
+}
+
+.tecnologias-grande .tecnologia img {
+    width: 22px;
+    height: 22px;
+}
