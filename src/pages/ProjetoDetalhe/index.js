@@ -122,7 +122,7 @@ export default function ProjetoDetalhe() {
                                     Ver código
                                 </a>
                             )}
-                            {outrosLinks.map(({ texto, url }) => (
+                            {outrosLinks.map(({ texto, url, icone = "bx bx-history" }) => (
                                 <a
                                     key={url}
                                     href={url}
@@ -130,7 +130,7 @@ export default function ProjetoDetalhe() {
                                     rel="noopener noreferrer"
                                     className="projeto-btn projeto-btn-secundario"
                                 >
-                                    <i className="bx bx-history" aria-hidden="true"></i>
+                                    <i className={icone} aria-hidden="true"></i>
                                     {texto}
                                 </a>
                             ))}
